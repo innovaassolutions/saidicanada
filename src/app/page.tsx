@@ -7,8 +7,10 @@ import SaidiLogo from "@/components/SaidiLogo";
 function LeafIcon({ className = "w-8 h-8" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89-.82M17 8A14 14 0 0 0 3 3a14 14 0 0 0 5 15M17 8l-4 4" />
-      <path d="M3 3l4 4" />
+      <path d="M12 22c-4-4-8-7.5-8-12C4 5 8 2 12 2c4 0 8 3 8 8 0 4.5-4 8-8 12z" />
+      <path d="M12 22V10" />
+      <path d="M8 14c2-2 4-3 4-4" />
+      <path d="M16 12c-2-1-4-1.5-4-2" />
     </svg>
   );
 }
@@ -53,15 +55,12 @@ function NetworkIcon({ className = "w-8 h-8" }: { className?: string }) {
   );
 }
 
-function RecycleIcon({ className = "w-8 h-8" }: { className?: string }) {
+function WindIcon({ className = "w-8 h-8" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" />
-      <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" />
-      <path d="m14 16-3 3 3 3" />
-      <path d="M8.293 13.596 4.875 7.97l3.08-1.78" />
-      <path d="M17 3.34l3.42 5.63-3.08 1.78" />
-      <path d="m12 8 3-3-3-3" />
+      <path d="M17.7 7.7A2.5 2.5 0 1 1 19 12H2" />
+      <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
+      <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
     </svg>
   );
 }
@@ -278,7 +277,7 @@ export default function Home() {
                   "Natural gas produces up to 50% less CO2 than coal and 30% less than oil, with significantly lower particulate and sulphur emissions. While not zero-carbon, LNG is widely recognized as a critical transition fuel as the industry works toward renewable alternatives. We chose it deliberately as the cleanest option available at scale today.",
               },
               {
-                icon: <RecycleIcon className="w-10 h-10" />,
+                icon: <WindIcon className="w-10 h-10" />,
                 title: "Free-Air & Water Cooling",
                 description:
                   "Canada's naturally cool climate allows us to use free-air cooling for much of the year, cutting energy consumption by up to 40% compared to traditional mechanical cooling. This is where our real environmental advantage lies — a benefit no amount of engineering can replicate in warmer climates.",
