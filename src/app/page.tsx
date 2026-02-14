@@ -1,134 +1,21 @@
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import SaidiLogo from "@/components/SaidiLogo";
-
-/* ──────────────────────────── SVG Icon Components ──────────────────────────── */
-
-function LeafIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22c-4-4-8-7.5-8-12C4 5 8 2 12 2c4 0 8 3 8 8 0 4.5-4 8-8 12z" />
-      <path d="M12 22V10" />
-      <path d="M8 14c2-2 4-3 4-4" />
-      <path d="M16 12c-2-1-4-1.5-4-2" />
-    </svg>
-  );
-}
-
-function ServerIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-      <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-      <line x1="6" y1="6" x2="6.01" y2="6" />
-      <line x1="6" y1="18" x2="6.01" y2="18" />
-    </svg>
-  );
-}
-
-function ShieldIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      <polyline points="9 12 11 14 15 10" />
-    </svg>
-  );
-}
-
-function CloudIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-    </svg>
-  );
-}
-
-function NetworkIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="5" r="3" />
-      <circle cx="5" cy="19" r="3" />
-      <circle cx="19" cy="19" r="3" />
-      <line x1="12" y1="8" x2="5" y2="16" />
-      <line x1="12" y1="8" x2="19" y2="16" />
-    </svg>
-  );
-}
-
-function WindIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17.7 7.7A2.5 2.5 0 1 1 19 12H2" />
-      <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
-      <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
-    </svg>
-  );
-}
-
-function BoltIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-    </svg>
-  );
-}
-
-function BackupIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-      <polyline points="7 10 12 15 17 10" />
-      <line x1="12" y1="15" x2="12" y2="3" />
-    </svg>
-  );
-}
-
-function SupportIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-    </svg>
-  );
-}
-
-function MonitorIcon({ className = "w-8 h-8" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-      <line x1="8" y1="21" x2="16" y2="21" />
-      <line x1="12" y1="17" x2="12" y2="21" />
-    </svg>
-  );
-}
-
-function CheckCircleIcon({ className = "w-6 h-6" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-      <polyline points="22 4 12 14.01 9 11.01" />
-    </svg>
-  );
-}
-
-function MapPinIcon({ className = "w-5 h-5" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-      <circle cx="12" cy="10" r="3" />
-    </svg>
-  );
-}
-
-function MailIcon({ className = "w-5 h-5" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="4" width="20" height="16" rx="2" />
-      <polyline points="22,7 12,13 2,7" />
-    </svg>
-  );
-}
-
-/* ──────────────────────────── Page Component ──────────────────────────── */
+import {
+  Leaf,
+  Server,
+  ShieldCheck,
+  Cloud,
+  Network,
+  Wind,
+  Zap,
+  Download,
+  MessageCircle,
+  Monitor,
+  CircleCheckBig,
+  MapPin,
+  Mail,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -271,19 +158,19 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <LeafIcon className="w-10 h-10" />,
+                icon: <Leaf size={40} />,
                 title: "LNG: A Cleaner Bridge Fuel",
                 description:
                   "Natural gas produces up to 50% less CO2 than coal and 30% less than oil, with significantly lower particulate and sulphur emissions. While not zero-carbon, LNG is widely recognized as a critical transition fuel as the industry works toward renewable alternatives. We chose it deliberately as the cleanest option available at scale today.",
               },
               {
-                icon: <WindIcon className="w-10 h-10" />,
+                icon: <Wind size={40} />,
                 title: "Free-Air & Water Cooling",
                 description:
                   "Canada's naturally cool climate allows us to use free-air cooling for much of the year, cutting energy consumption by up to 40% compared to traditional mechanical cooling. This is where our real environmental advantage lies — a benefit no amount of engineering can replicate in warmer climates.",
               },
               {
-                icon: <BoltIcon className="w-10 h-10" />,
+                icon: <Zap size={40} />,
                 title: "Efficiency-First Engineering",
                 description:
                   "We target a Power Usage Effectiveness (PUE) of 1.2 or lower — well below the industry average of 1.58. Combined with LNG's lower emissions profile, this means every unit of computing we deliver has a smaller carbon footprint than most competitors worldwide.",
@@ -337,37 +224,37 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <ServerIcon className="w-9 h-9" />,
+                icon: <Server size={36} />,
                 title: "Colocation Services",
                 description:
                   "Secure, climate-controlled rack space in our Tier III+ facilities. Bring your own hardware and benefit from our resilient power, cooling, and connectivity infrastructure. Flexible options from single racks to private cages and suites.",
               },
               {
-                icon: <CloudIcon className="w-9 h-9" />,
+                icon: <Cloud size={36} />,
                 title: "Cloud & Hybrid Solutions",
                 description:
                   "Private cloud, public cloud, and hybrid architectures tailored to your workload. Our cloud infrastructure runs on energy-efficient hardware powered by LNG, delivering lower-carbon computing compared to coal or oil-dependent alternatives.",
               },
               {
-                icon: <MonitorIcon className="w-9 h-9" />,
+                icon: <Monitor size={36} />,
                 title: "Managed Hosting",
                 description:
                   "Fully managed dedicated servers and virtual environments. We handle provisioning, patching, monitoring, and maintenance so you can focus on your core business without worrying about infrastructure.",
               },
               {
-                icon: <BackupIcon className="w-9 h-9" />,
+                icon: <Download size={36} />,
                 title: "Disaster Recovery & Backup",
                 description:
                   "Business continuity solutions with geographically diverse recovery sites across Canada. Automated backups, replication, and tested failover procedures ensure your data is always protected and recoverable.",
               },
               {
-                icon: <NetworkIcon className="w-9 h-9" />,
+                icon: <Network size={36} />,
                 title: "Network & Connectivity",
                 description:
                   "Carrier-neutral facilities with access to major Canadian and international network providers. High-bandwidth, low-latency connections with redundant fibre paths and direct peering with leading cloud platforms.",
               },
               {
-                icon: <ShieldIcon className="w-9 h-9" />,
+                icon: <ShieldCheck size={36} />,
                 title: "Security & Compliance",
                 description:
                   "Physical security with biometric access, 24/7 surveillance, and multi-layer perimeter controls. Compliance support for Canadian privacy regulations including PIPEDA, provincial health data requirements, and SOC 2.",
@@ -421,7 +308,7 @@ export default function Home() {
                   "Capacity planning and performance tuning",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-5 h-5 text-forest mt-0.5 shrink-0" />
+                    <CircleCheckBig size={20} className="text-forest mt-0.5 shrink-0" />
                     <span className="text-warm-gray">{item}</span>
                   </div>
                 ))}
@@ -445,22 +332,22 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <LeafIcon className="w-8 h-8" />,
+                icon: <Leaf size={32} />,
                 title: "Lower Carbon",
                 description: "LNG power plus Canada's natural cooling means a significantly smaller carbon footprint than the industry average.",
               },
               {
-                icon: <ShieldIcon className="w-8 h-8" />,
+                icon: <ShieldCheck size={32} />,
                 title: "Canadian Data Sovereignty",
                 description: "Your data stays in Canada, protected by some of the world's strongest privacy laws.",
               },
               {
-                icon: <BoltIcon className="w-8 h-8" />,
+                icon: <Zap size={32} />,
                 title: "Reliable Power",
                 description: "Redundant LNG-powered generation with full backup systems for consistent, dependable uptime.",
               },
               {
-                icon: <SupportIcon className="w-8 h-8" />,
+                icon: <MessageCircle size={32} />,
                 title: "Canadian Support",
                 description: "Bilingual, expert support teams based in Canada — available 24/7/365.",
               },
@@ -568,7 +455,7 @@ export default function Home() {
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-mint rounded-xl flex items-center justify-center text-forest shrink-0">
-                  <MapPinIcon />
+                  <MapPin size={20} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-forest-dark mb-1">Location</h3>
@@ -577,7 +464,7 @@ export default function Home() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-mint rounded-xl flex items-center justify-center text-forest shrink-0">
-                  <MailIcon />
+                  <Mail size={20} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-forest-dark mb-1">Email</h3>
@@ -586,7 +473,7 @@ export default function Home() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-mint rounded-xl flex items-center justify-center text-forest shrink-0">
-                  <SupportIcon className="w-5 h-5" />
+                  <MessageCircle size={20} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-forest-dark mb-1">Support</h3>
