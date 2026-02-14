@@ -178,15 +178,15 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
           <div className="max-w-2xl">
             <span className="inline-block bg-sage/20 text-white border border-sage/30 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              Sustainable Infrastructure for Canada
+              Lower-Carbon Infrastructure for Canada
             </span>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
               Powering the Future,{" "}
-              <span className="text-sage-light">Preserving the Planet</span>
+              <span className="text-sage-light">Reducing the Impact</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-xl">
-              SAIDI Canada delivers enterprise-grade data centre services built on renewable energy and responsible
-              innovation. High performance, minimal footprint.
+              SAIDI Canada delivers enterprise-grade data centre services powered by natural gas — the
+              cleanest-burning fossil fuel — combined with Canada&apos;s natural cooling advantage. High performance, lower footprint.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -216,20 +216,21 @@ export default function Home() {
                 Data Centre Excellence, Rooted in Canadian Values
               </h2>
               <p className="text-warm-gray leading-relaxed mb-5">
-                Canada is uniquely positioned to lead the global data centre industry. With abundant hydroelectric
-                power, a naturally cool climate that reduces cooling costs, and some of the strongest environmental
-                regulations in the world, our nation offers the ideal foundation for sustainable digital
-                infrastructure.
+                Canada is uniquely positioned to support the global data centre industry. With a naturally cool
+                climate that dramatically reduces cooling costs, abundant natural gas resources, and some of the
+                strongest environmental regulations in the world, our nation provides a responsible foundation
+                for digital infrastructure.
               </p>
               <p className="text-warm-gray leading-relaxed mb-8">
-                SAIDI Canada harnesses these natural advantages to deliver data centre services that don&apos;t
-                compromise between performance and planet. We believe the growth of digital infrastructure and
-                environmental stewardship must go hand in hand.
+                SAIDI Canada&apos;s facilities are powered primarily by liquefied natural gas (LNG) — the
+                cleanest-burning fossil fuel, producing up to 50% less CO2 than coal and 30% less than oil.
+                Combined with Canada&apos;s cold climate and our commitment to operational efficiency, we
+                deliver data centre services with a significantly lower carbon footprint than the industry norm.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4">
-                  <div className="text-3xl font-bold text-forest">100%</div>
-                  <div className="text-sm text-warm-gray mt-1">Renewable Energy Goal</div>
+                  <div className="text-3xl font-bold text-forest">~50%</div>
+                  <div className="text-sm text-warm-gray mt-1">Less CO2 Than Coal</div>
                 </div>
                 <div className="text-center p-4">
                   <div className="text-3xl font-bold text-forest">99.99%</div>
@@ -263,34 +264,35 @@ export default function Home() {
           <div className="text-center mb-16">
             <span className="text-forest font-semibold text-sm uppercase tracking-wider">Our Commitment</span>
             <h2 className="text-4xl font-bold text-forest-dark mt-3 mb-6">
-              Sustainable by Design, Not Afterthought
+              A Cleaner Approach to Data Centre Energy
             </h2>
             <p className="text-warm-gray max-w-3xl mx-auto leading-relaxed">
               The data centre industry accounts for roughly 1-1.5% of global electricity consumption, and that
-              figure is rising. At SAIDI Canada, we&apos;re building infrastructure that addresses this challenge
-              head-on — leveraging Canada&apos;s clean energy grid, natural cooling, and innovative engineering to
-              minimize our environmental impact.
+              figure is rising. We&apos;re honest about the challenge: our facilities run on LNG, a fossil fuel.
+              But it&apos;s the cleanest-burning one available, and when combined with Canada&apos;s natural cooling
+              advantage and our efficiency-first engineering, it represents a meaningful step toward lower-carbon
+              digital infrastructure — today, not someday.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 icon: <LeafIcon className="w-10 h-10" />,
-                title: "Renewable Energy Powered",
+                title: "LNG: A Cleaner Bridge Fuel",
                 description:
-                  "Our facilities are strategically located near Canada's abundant hydroelectric resources. We're committed to sourcing 100% of our energy from renewable sources, dramatically reducing the carbon footprint of your digital operations.",
+                  "Natural gas produces up to 50% less CO2 than coal and 30% less than oil, with significantly lower particulate and sulphur emissions. While not zero-carbon, LNG is widely recognized as a critical transition fuel as the industry works toward renewable alternatives. We chose it deliberately as the cleanest option available at scale today.",
               },
               {
                 icon: <RecycleIcon className="w-10 h-10" />,
                 title: "Free-Air & Water Cooling",
                 description:
-                  "Canada's naturally cool climate allows us to use free-air cooling for much of the year, cutting energy consumption by up to 40% compared to traditional mechanical cooling. Our water-side economizers leverage cold Canadian water sources responsibly.",
+                  "Canada's naturally cool climate allows us to use free-air cooling for much of the year, cutting energy consumption by up to 40% compared to traditional mechanical cooling. This is where our real environmental advantage lies — a benefit no amount of engineering can replicate in warmer climates.",
               },
               {
                 icon: <BoltIcon className="w-10 h-10" />,
-                title: "Industry-Leading PUE",
+                title: "Efficiency-First Engineering",
                 description:
-                  "We target a Power Usage Effectiveness (PUE) of 1.2 or lower — well below the industry average of 1.58. Every watt we save is a step toward a more sustainable digital future and lower operating costs for our clients.",
+                  "We target a Power Usage Effectiveness (PUE) of 1.2 or lower — well below the industry average of 1.58. Combined with LNG's lower emissions profile, this means every unit of computing we deliver has a smaller carbon footprint than most competitors worldwide.",
               },
             ].map((item, i) => (
               <div
@@ -312,11 +314,12 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-forest-dark/50 flex items-center justify-center">
               <div className="text-center text-white px-6">
-                <h3 className="text-3xl md:text-4xl font-bold mb-4">Built for Canada&apos;s Climate Advantage</h3>
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">Canada&apos;s Climate Is Our Greatest Asset</h3>
                 <p className="text-white/90 max-w-2xl text-lg">
-                  Our northern location isn&apos;t just scenic — it&apos;s strategic. Cold ambient temperatures
-                  reduce cooling demands naturally, making Canada one of the most energy-efficient places on Earth
-                  to operate a data centre.
+                  Our northern location isn&apos;t just scenic — it&apos;s our most powerful efficiency tool.
+                  Cold ambient temperatures slash cooling demands naturally, and when paired with LNG&apos;s
+                  lower emissions profile, the result is one of the lowest-carbon data centre operations achievable
+                  with today&apos;s proven technology.
                 </p>
               </div>
             </div>
@@ -349,7 +352,7 @@ export default function Home() {
                 icon: <CloudIcon className="w-9 h-9" />,
                 title: "Cloud & Hybrid Solutions",
                 description:
-                  "Private cloud, public cloud, and hybrid architectures tailored to your workload. Our cloud infrastructure runs on energy-efficient hardware and is backed by Canada's clean power grid for lower-carbon computing.",
+                  "Private cloud, public cloud, and hybrid architectures tailored to your workload. Our cloud infrastructure runs on energy-efficient hardware powered by LNG, delivering lower-carbon computing compared to coal or oil-dependent alternatives.",
               },
               {
                 icon: <MonitorIcon className="w-9 h-9" />,
@@ -441,16 +444,16 @@ export default function Home() {
             <span className="text-sage-light font-semibold text-sm uppercase tracking-wider">The SAIDI Difference</span>
             <h2 className="text-4xl font-bold text-white mt-3 mb-6">Why Choose SAIDI Canada</h2>
             <p className="text-white/80 max-w-3xl mx-auto leading-relaxed">
-              We combine world-class data centre operations with a genuine commitment to environmental
-              responsibility — delivering the reliability your business demands without the ecological cost.
+              We combine world-class data centre operations with transparent environmental
+              responsibility — delivering the reliability your business demands with a lower carbon footprint.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: <LeafIcon className="w-8 h-8" />,
-                title: "Green First",
-                description: "Every design decision prioritizes energy efficiency and environmental responsibility.",
+                title: "Lower Carbon",
+                description: "LNG power plus Canada's natural cooling means a significantly smaller carbon footprint than the industry average.",
               },
               {
                 icon: <ShieldIcon className="w-8 h-8" />,
@@ -460,7 +463,7 @@ export default function Home() {
               {
                 icon: <BoltIcon className="w-8 h-8" />,
                 title: "Reliable Power",
-                description: "Redundant power feeds from Canada's stable, clean energy grid with full backup systems.",
+                description: "Redundant LNG-powered generation with full backup systems for consistent, dependable uptime.",
               },
               {
                 icon: <SupportIcon className="w-8 h-8" />,
@@ -533,11 +536,11 @@ export default function Home() {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Build Greener Digital Infrastructure?
+            Ready for Lower-Carbon Digital Infrastructure?
           </h2>
           <p className="text-white/90 text-lg mb-10 max-w-2xl mx-auto">
-            Join the growing number of Canadian businesses choosing sustainable data centre solutions.
-            Let&apos;s discuss how SAIDI Canada can power your operations — responsibly.
+            Join the growing number of Canadian businesses choosing cleaner data centre solutions.
+            Let&apos;s discuss how SAIDI Canada can power your operations with a smaller footprint.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -620,8 +623,8 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-white/70 leading-relaxed max-w-md">
-                Sustainable data centre services for Canadian businesses. High performance, minimal environmental
-                footprint, powered by clean energy.
+                Lower-carbon data centre services for Canadian businesses. High performance, smaller environmental
+                footprint, powered by LNG and Canada&apos;s natural cooling advantage.
               </p>
             </div>
             <div>

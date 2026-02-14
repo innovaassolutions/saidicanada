@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SAIDI Canada | Sustainable Data Centre Services",
+  title: "SAIDI Canada | Lower-Carbon Data Centre Services",
   description:
-    "SAIDI Canada delivers sustainable, high-performance data centre services powered by renewable energy. Colocation, cloud, managed hosting, and more — built for a greener future.",
+    "SAIDI Canada delivers high-performance data centre services powered by LNG and Canada's natural cooling advantage. Colocation, cloud, managed hosting, and more — with a smaller carbon footprint.",
 };
 
 export default function RootLayout({
