@@ -247,7 +247,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1462275646964-a0e3c11f18a6?w=800&q=80"
+                src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80"
                 alt="Northern lights over Canadian landscape"
                 fill
                 className="object-cover"
