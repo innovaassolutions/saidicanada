@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "SAIDI Canada | Lower-Carbon Data Centre Services",
   description:
     "SAIDI Canada delivers high-performance data centre services powered by LNG and Canada's natural cooling advantage. Colocation, cloud, managed hosting, and more — with a smaller carbon footprint.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
