@@ -1,6 +1,5 @@
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
-import SaidiLogo from "@/components/SaidiLogo";
 import {
   Leaf,
   Server,
@@ -23,8 +22,14 @@ export default function Home() {
       {/* ─── Navigation ─── */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-sage/20">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <SaidiLogo className="w-16 h-8" />
+          <div className="flex items-center gap-3">
+            <Image
+              src="/SAIDICanadaLogo.png"
+              alt="SAIDI Canada"
+              width={48}
+              height={48}
+              className="object-contain"
+            />
             <span className="text-2xl font-bold text-forest">
               SAIDI <span className="text-sage font-normal">Canada</span>
             </span>
@@ -491,8 +496,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <SaidiLogo className="w-16 h-8 [&_path]:stroke-white [&_path:last-child]:fill-sage-light" />
+              <div className="flex items-center gap-3 mb-4">
+                <Image
+                  src="/SAIDICanadaLogo.png"
+                  alt="SAIDI Canada"
+                  width={44}
+                  height={44}
+                  className="object-contain brightness-0 invert"
+                />
                 <span className="text-2xl font-bold">
                   SAIDI <span className="text-sage-light font-normal">Canada</span>
                 </span>
