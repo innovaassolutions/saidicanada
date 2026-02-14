@@ -1,0 +1,653 @@
+import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
+
+/* ──────────────────────────── SVG Icon Components ──────────────────────────── */
+
+function LeafIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89-.82M17 8A14 14 0 0 0 3 3a14 14 0 0 0 5 15M17 8l-4 4" />
+      <path d="M3 3l4 4" />
+    </svg>
+  );
+}
+
+function ServerIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+      <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+      <line x1="6" y1="6" x2="6.01" y2="6" />
+      <line x1="6" y1="18" x2="6.01" y2="18" />
+    </svg>
+  );
+}
+
+function ShieldIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <polyline points="9 12 11 14 15 10" />
+    </svg>
+  );
+}
+
+function CloudIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+    </svg>
+  );
+}
+
+function NetworkIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="5" r="3" />
+      <circle cx="5" cy="19" r="3" />
+      <circle cx="19" cy="19" r="3" />
+      <line x1="12" y1="8" x2="5" y2="16" />
+      <line x1="12" y1="8" x2="19" y2="16" />
+    </svg>
+  );
+}
+
+function RecycleIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" />
+      <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" />
+      <path d="m14 16-3 3 3 3" />
+      <path d="M8.293 13.596 4.875 7.97l3.08-1.78" />
+      <path d="M17 3.34l3.42 5.63-3.08 1.78" />
+      <path d="m12 8 3-3-3-3" />
+    </svg>
+  );
+}
+
+function BoltIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+    </svg>
+  );
+}
+
+function BackupIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+  );
+}
+
+function SupportIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+  );
+}
+
+function MonitorIcon({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+      <line x1="8" y1="21" x2="16" y2="21" />
+      <line x1="12" y1="17" x2="12" y2="21" />
+    </svg>
+  );
+}
+
+function CheckCircleIcon({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+      <polyline points="22 4 12 14.01 9 11.01" />
+    </svg>
+  );
+}
+
+function MapPinIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  );
+}
+
+function MailIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <polyline points="22,7 12,13 2,7" />
+    </svg>
+  );
+}
+
+/* ──────────────────────────── Page Component ──────────────────────────── */
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-ivory text-warm-gray">
+      {/* ─── Navigation ─── */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-sage/20">
+        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/SAIDILogo.webp"
+              alt="SAIDI Canada"
+              width={44}
+              height={44}
+              className="rounded-full"
+            />
+            <span className="text-xl font-bold text-forest">
+              SAIDI <span className="text-sage font-normal">Canada</span>
+            </span>
+          </div>
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#about" className="text-warm-gray hover:text-forest transition-colors text-sm font-medium">About</a>
+            <a href="#services" className="text-warm-gray hover:text-forest transition-colors text-sm font-medium">Services</a>
+            <a href="#sustainability" className="text-warm-gray hover:text-forest transition-colors text-sm font-medium">Sustainability</a>
+            <a href="#contact" className="text-warm-gray hover:text-forest transition-colors text-sm font-medium">Contact</a>
+            <a
+              href="#contact"
+              className="bg-forest text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-forest-light transition-colors"
+            >
+              Get Started
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      {/* ─── Hero Section ─── */}
+      <section className="relative min-h-screen flex items-center pt-20">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
+            alt="Canadian Rocky Mountains with pristine blue lake"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-forest-dark/80 via-forest/60 to-transparent" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
+          <div className="max-w-2xl">
+            <span className="inline-block bg-sage/20 text-white border border-sage/30 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+              Sustainable Infrastructure for Canada
+            </span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+              Powering the Future,{" "}
+              <span className="text-sage-light">Preserving the Planet</span>
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-xl">
+              SAIDI Canada delivers enterprise-grade data centre services built on renewable energy and responsible
+              innovation. High performance, minimal footprint.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#services"
+                className="bg-white text-forest px-8 py-4 rounded-lg text-base font-semibold hover:bg-sage-light hover:text-forest-dark transition-colors text-center"
+              >
+                Explore Our Services
+              </a>
+              <a
+                href="#sustainability"
+                className="border-2 border-white/40 text-white px-8 py-4 rounded-lg text-base font-semibold hover:bg-white/10 transition-colors text-center"
+              >
+                Our Green Commitment
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── About / Mission ─── */}
+      <section id="about" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-forest font-semibold text-sm uppercase tracking-wider">About SAIDI Canada</span>
+              <h2 className="text-4xl font-bold text-forest-dark mt-3 mb-6">
+                Data Centre Excellence, Rooted in Canadian Values
+              </h2>
+              <p className="text-warm-gray leading-relaxed mb-5">
+                Canada is uniquely positioned to lead the global data centre industry. With abundant hydroelectric
+                power, a naturally cool climate that reduces cooling costs, and some of the strongest environmental
+                regulations in the world, our nation offers the ideal foundation for sustainable digital
+                infrastructure.
+              </p>
+              <p className="text-warm-gray leading-relaxed mb-8">
+                SAIDI Canada harnesses these natural advantages to deliver data centre services that don&apos;t
+                compromise between performance and planet. We believe the growth of digital infrastructure and
+                environmental stewardship must go hand in hand.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-forest">100%</div>
+                  <div className="text-sm text-warm-gray mt-1">Renewable Energy Goal</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-forest">99.99%</div>
+                  <div className="text-sm text-warm-gray mt-1">Uptime SLA</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-forest">24/7</div>
+                  <div className="text-sm text-warm-gray mt-1">Expert Support</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-forest">Tier III+</div>
+                  <div className="text-sm text-warm-gray mt-1">Facility Design</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1462275646964-a0e3c11f18a6?w=800&q=80"
+                alt="Northern lights over Canadian landscape"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Sustainability Section ─── */}
+      <section id="sustainability" className="py-24 bg-mint">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-forest font-semibold text-sm uppercase tracking-wider">Our Commitment</span>
+            <h2 className="text-4xl font-bold text-forest-dark mt-3 mb-6">
+              Sustainable by Design, Not Afterthought
+            </h2>
+            <p className="text-warm-gray max-w-3xl mx-auto leading-relaxed">
+              The data centre industry accounts for roughly 1-1.5% of global electricity consumption, and that
+              figure is rising. At SAIDI Canada, we&apos;re building infrastructure that addresses this challenge
+              head-on — leveraging Canada&apos;s clean energy grid, natural cooling, and innovative engineering to
+              minimize our environmental impact.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <LeafIcon className="w-10 h-10" />,
+                title: "Renewable Energy Powered",
+                description:
+                  "Our facilities are strategically located near Canada's abundant hydroelectric resources. We're committed to sourcing 100% of our energy from renewable sources, dramatically reducing the carbon footprint of your digital operations.",
+              },
+              {
+                icon: <RecycleIcon className="w-10 h-10" />,
+                title: "Free-Air & Water Cooling",
+                description:
+                  "Canada's naturally cool climate allows us to use free-air cooling for much of the year, cutting energy consumption by up to 40% compared to traditional mechanical cooling. Our water-side economizers leverage cold Canadian water sources responsibly.",
+              },
+              {
+                icon: <BoltIcon className="w-10 h-10" />,
+                title: "Industry-Leading PUE",
+                description:
+                  "We target a Power Usage Effectiveness (PUE) of 1.2 or lower — well below the industry average of 1.58. Every watt we save is a step toward a more sustainable digital future and lower operating costs for our clients.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-sage/10"
+              >
+                <div className="text-forest mb-5">{item.icon}</div>
+                <h3 className="text-xl font-bold text-forest-dark mb-3">{item.title}</h3>
+                <p className="text-warm-gray leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-16 relative rounded-2xl overflow-hidden h-72 md:h-96">
+            <Image
+              src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=1600&q=80"
+              alt="Moraine Lake in Banff National Park surrounded by forest"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-forest-dark/50 flex items-center justify-center">
+              <div className="text-center text-white px-6">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">Built for Canada&apos;s Climate Advantage</h3>
+                <p className="text-white/90 max-w-2xl text-lg">
+                  Our northern location isn&apos;t just scenic — it&apos;s strategic. Cold ambient temperatures
+                  reduce cooling demands naturally, making Canada one of the most energy-efficient places on Earth
+                  to operate a data centre.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Services Section ─── */}
+      <section id="services" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-forest font-semibold text-sm uppercase tracking-wider">What We Offer</span>
+            <h2 className="text-4xl font-bold text-forest-dark mt-3 mb-6">
+              Comprehensive Data Centre Services
+            </h2>
+            <p className="text-warm-gray max-w-3xl mx-auto leading-relaxed">
+              From colocation to fully managed infrastructure, SAIDI Canada provides the full spectrum of data
+              centre services — all delivered with our commitment to sustainability and operational excellence.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <ServerIcon className="w-9 h-9" />,
+                title: "Colocation Services",
+                description:
+                  "Secure, climate-controlled rack space in our Tier III+ facilities. Bring your own hardware and benefit from our resilient power, cooling, and connectivity infrastructure. Flexible options from single racks to private cages and suites.",
+              },
+              {
+                icon: <CloudIcon className="w-9 h-9" />,
+                title: "Cloud & Hybrid Solutions",
+                description:
+                  "Private cloud, public cloud, and hybrid architectures tailored to your workload. Our cloud infrastructure runs on energy-efficient hardware and is backed by Canada's clean power grid for lower-carbon computing.",
+              },
+              {
+                icon: <MonitorIcon className="w-9 h-9" />,
+                title: "Managed Hosting",
+                description:
+                  "Fully managed dedicated servers and virtual environments. We handle provisioning, patching, monitoring, and maintenance so you can focus on your core business without worrying about infrastructure.",
+              },
+              {
+                icon: <BackupIcon className="w-9 h-9" />,
+                title: "Disaster Recovery & Backup",
+                description:
+                  "Business continuity solutions with geographically diverse recovery sites across Canada. Automated backups, replication, and tested failover procedures ensure your data is always protected and recoverable.",
+              },
+              {
+                icon: <NetworkIcon className="w-9 h-9" />,
+                title: "Network & Connectivity",
+                description:
+                  "Carrier-neutral facilities with access to major Canadian and international network providers. High-bandwidth, low-latency connections with redundant fibre paths and direct peering with leading cloud platforms.",
+              },
+              {
+                icon: <ShieldIcon className="w-9 h-9" />,
+                title: "Security & Compliance",
+                description:
+                  "Physical security with biometric access, 24/7 surveillance, and multi-layer perimeter controls. Compliance support for Canadian privacy regulations including PIPEDA, provincial health data requirements, and SOC 2.",
+              },
+            ].map((service, i) => (
+              <div
+                key={i}
+                className="group bg-light-gray rounded-2xl p-8 hover:bg-forest hover:text-white transition-all duration-300 border border-sage/10 hover:border-forest"
+              >
+                <div className="text-forest group-hover:text-sage-light mb-5 transition-colors">{service.icon}</div>
+                <h3 className="text-xl font-bold text-forest-dark group-hover:text-white mb-3 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-warm-gray group-hover:text-white/85 leading-relaxed transition-colors">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Managed Services ─── */}
+      <section className="py-24 bg-ivory">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=800&q=80"
+                alt="Sunset over a Canadian lake with forests"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <span className="text-forest font-semibold text-sm uppercase tracking-wider">Full-Service Support</span>
+              <h2 className="text-4xl font-bold text-forest-dark mt-3 mb-6">Managed Services</h2>
+              <p className="text-warm-gray leading-relaxed mb-8">
+                Let our team of certified engineers manage your infrastructure end-to-end. We offer proactive
+                monitoring, rapid incident response, and strategic guidance — all backed by Canadian-based support
+                staff available around the clock.
+              </p>
+              <div className="space-y-5">
+                {[
+                  "Infrastructure provisioning, scaling, and optimization",
+                  "24/7 proactive monitoring and incident response",
+                  "Security management and threat detection",
+                  "Backup management and disaster recovery testing",
+                  "Operating system and application patching",
+                  "Compliance auditing and reporting",
+                  "Capacity planning and performance tuning",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircleIcon className="w-5 h-5 text-forest mt-0.5 shrink-0" />
+                    <span className="text-warm-gray">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Why SAIDI Canada ─── */}
+      <section className="py-24 bg-forest-dark text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-sage-light font-semibold text-sm uppercase tracking-wider">The SAIDI Difference</span>
+            <h2 className="text-4xl font-bold text-white mt-3 mb-6">Why Choose SAIDI Canada</h2>
+            <p className="text-white/80 max-w-3xl mx-auto leading-relaxed">
+              We combine world-class data centre operations with a genuine commitment to environmental
+              responsibility — delivering the reliability your business demands without the ecological cost.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <LeafIcon className="w-8 h-8" />,
+                title: "Green First",
+                description: "Every design decision prioritizes energy efficiency and environmental responsibility.",
+              },
+              {
+                icon: <ShieldIcon className="w-8 h-8" />,
+                title: "Canadian Data Sovereignty",
+                description: "Your data stays in Canada, protected by some of the world's strongest privacy laws.",
+              },
+              {
+                icon: <BoltIcon className="w-8 h-8" />,
+                title: "Reliable Power",
+                description: "Redundant power feeds from Canada's stable, clean energy grid with full backup systems.",
+              },
+              {
+                icon: <SupportIcon className="w-8 h-8" />,
+                title: "Canadian Support",
+                description: "Bilingual, expert support teams based in Canada — available 24/7/365.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="text-center p-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-2xl text-sage-light mb-5">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-white/70 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── How It Works ─── */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-forest font-semibold text-sm uppercase tracking-wider">Getting Started</span>
+            <h2 className="text-4xl font-bold text-forest-dark mt-3 mb-6">How It Works</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                step: "01",
+                title: "Consult & Design",
+                description:
+                  "We begin with a thorough assessment of your requirements — capacity, connectivity, compliance, and sustainability goals. Our team designs a solution tailored to your needs.",
+              },
+              {
+                step: "02",
+                title: "Deploy & Connect",
+                description:
+                  "Your infrastructure is provisioned in our secure, energy-efficient facilities. We handle everything from rack installation to network cross-connects, ensuring a seamless go-live.",
+              },
+              {
+                step: "03",
+                title: "Manage & Scale",
+                description:
+                  "With 24/7 monitoring and support, we keep your operations running at peak performance. As your needs grow, we scale your resources seamlessly — always sustainably.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-mint text-forest text-2xl font-bold rounded-full mb-6">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-bold text-forest-dark mb-3">{item.title}</h3>
+                <p className="text-warm-gray leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CTA Section ─── */}
+      <section className="relative py-24">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80"
+            alt="Canadian mountain landscape"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-forest-dark/70" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Build Greener Digital Infrastructure?
+          </h2>
+          <p className="text-white/90 text-lg mb-10 max-w-2xl mx-auto">
+            Join the growing number of Canadian businesses choosing sustainable data centre solutions.
+            Let&apos;s discuss how SAIDI Canada can power your operations — responsibly.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="bg-white text-forest px-10 py-4 rounded-lg text-base font-semibold hover:bg-sage-light transition-colors"
+            >
+              Contact Our Team
+            </a>
+            <a
+              href="#services"
+              className="border-2 border-white text-white px-10 py-4 rounded-lg text-base font-semibold hover:bg-white/10 transition-colors"
+            >
+              View All Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Contact Section ─── */}
+      <section id="contact" className="py-24 bg-light-gray">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-forest font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
+            <h2 className="text-4xl font-bold text-forest-dark mt-3 mb-6">Contact Us</h2>
+            <p className="text-warm-gray max-w-2xl mx-auto">
+              Whether you&apos;re looking for colocation, cloud solutions, or managed services, our team is ready
+              to help you find the right sustainable infrastructure solution.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-mint rounded-xl flex items-center justify-center text-forest shrink-0">
+                  <MapPinIcon />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-forest-dark mb-1">Location</h3>
+                  <p className="text-warm-gray">Canada</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-mint rounded-xl flex items-center justify-center text-forest shrink-0">
+                  <MailIcon />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-forest-dark mb-1">Email</h3>
+                  <p className="text-warm-gray">info@saidicanada.com</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-mint rounded-xl flex items-center justify-center text-forest shrink-0">
+                  <SupportIcon className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-forest-dark mb-1">Support</h3>
+                  <p className="text-warm-gray">24/7 Canadian-based technical support</p>
+                </div>
+              </div>
+            </div>
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Footer ─── */}
+      <footer className="bg-forest-dark text-white py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            <div className="md:col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <Image
+                  src="/SAIDILogo.webp"
+                  alt="SAIDI Canada"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+                <span className="text-xl font-bold">
+                  SAIDI <span className="text-sage-light font-normal">Canada</span>
+                </span>
+              </div>
+              <p className="text-white/70 leading-relaxed max-w-md">
+                Sustainable data centre services for Canadian businesses. High performance, minimal environmental
+                footprint, powered by clean energy.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-white/70 text-sm">
+                <li><a href="#services" className="hover:text-sage-light transition-colors">Colocation</a></li>
+                <li><a href="#services" className="hover:text-sage-light transition-colors">Cloud Solutions</a></li>
+                <li><a href="#services" className="hover:text-sage-light transition-colors">Managed Hosting</a></li>
+                <li><a href="#services" className="hover:text-sage-light transition-colors">Disaster Recovery</a></li>
+                <li><a href="#services" className="hover:text-sage-light transition-colors">Network Services</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-white/70 text-sm">
+                <li><a href="#about" className="hover:text-sage-light transition-colors">About Us</a></li>
+                <li><a href="#sustainability" className="hover:text-sage-light transition-colors">Sustainability</a></li>
+                <li><a href="#contact" className="hover:text-sage-light transition-colors">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/10 pt-8 text-center text-white/50 text-sm">
+            <p>&copy; {new Date().getFullYear()} SAIDI Canada. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
