@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "home": {
+      "title": "SAIDI Canada | Services de centres de données à faible émission de carbone",
+      "description": "SAIDI Canada offre des services de centres de données haute performance alimentés par le GNL et l'avantage naturel de refroidissement du Canada."
+    },
+    "about": {
+      "title": "À propos | SAIDI Canada",
+      "description": "Découvrez la mission de SAIDI Canada : offrir des services de centres de données à faible émission de carbone à travers le Canada."
+    },
+    "services": {
+      "title": "Services | SAIDI Canada",
+      "description": "Services complets de centres de données : colocation, infonuagique, hébergement géré, reprise après sinistre et plus encore."
+    },
+    "locations": {
+      "title": "Emplacements | SAIDI Canada",
+      "description": "Emplacements des centres de données SAIDI Canada à travers le pays — Toronto, Montréal, Calgary et Vancouver."
+    },
+    "sustainability": {
+      "title": "Développement durable | SAIDI Canada",
+      "description": "Notre engagement envers des opérations de centres de données à faible émission de carbone grâce au GNL et au refroidissement naturel."
+    },
+    "contact": {
+      "title": "Contact | SAIDI Canada",
+      "description": "Contactez SAIDI Canada pour des services de colocation, d'infonuagique et de centres de données gérés."
+    },
+    "calculator": {
+      "title": "Calculateur de coûts | SAIDI Canada",
+      "description": "Estimez vos coûts de centre de données avec notre calculateur de prix transparent."
+    }
+  },
+  "nav": {
+    "about": "À propos",
+    "services": "Services",
+    "sustainability": "Durabilité",
+    "locations": "Emplacements",
+    "calculator": "Calculateur",
+    "contact": "Contact",
+    "getStarted": "Commencer"
+  },
+  "hero": {
+    "badge": "Infrastructure à faible émission de carbone pour le Canada",
+    "title": "Alimenter l'avenir,",
+    "titleHighlight": "Réduire l'impact",
+    "description": "SAIDI Canada offre des services de centres de données de calibre entreprise alimentés par le gaz naturel — le combustible fossile le plus propre — combiné à l'avantage naturel de refroidissement du Canada. Haute performance, empreinte réduite.",
+    "cta1": "Explorer nos services",
+    "cta2": "Notre engagement vert"
+  },
+  "about": {
+    "label": "À propos de SAIDI Canada",
+    "title": "L'excellence des centres de données, ancrée dans les valeurs canadiennes",
+    "p1": "Le Canada est particulièrement bien positionné pour soutenir l'industrie mondiale des centres de données. Avec un climat naturellement frais qui réduit considérablement les coûts de refroidissement, d'abondantes ressources en gaz naturel et certaines des réglementations environnementales les plus strictes au monde, notre pays offre une base responsable pour l'infrastructure numérique.",
+    "p2": "Les installations de SAIDI Canada sont alimentées principalement par le gaz naturel liquéfié (GNL) — le combustible fossile le plus propre, produisant jusqu'à 50 % moins de CO2 que le charbon et 30 % moins que le pétrole. Combiné au climat froid du Canada et à notre engagement envers l'efficacité opérationnelle, nous offrons des services de centres de données avec une empreinte carbone nettement inférieure à la norme de l'industrie.",
+    "stats": {
+      "co2": { "value": "~50 %", "label": "Moins de CO2 que le charbon" },
+      "uptime": { "value": "99,99 %", "label": "SLA de disponibilité" },
+      "support": { "value": "24/7", "label": "Soutien expert" },
+      "tier": { "value": "Tier III+", "label": "Conception des installations" }
+    }
+  },
+  "sustainability": {
+    "label": "Notre engagement",
+    "title": "Une approche plus propre de l'énergie des centres de données",
+    "description": "L'industrie des centres de données représente environ 1 à 1,5 % de la consommation mondiale d'électricité, et ce chiffre est en hausse. Nous sommes honnêtes face au défi : nos installations fonctionnent au GNL, un combustible fossile. Mais c'est le plus propre disponible, et combiné à l'avantage naturel de refroidissement du Canada et à notre ingénierie axée sur l'efficacité, il représente un pas significatif vers une infrastructure numérique à faible émission de carbone — aujourd'hui, pas un jour.",
+    "cards": {
+      "lng": {
+        "title": "GNL : un carburant de transition plus propre",
+        "description": "Le gaz naturel produit jusqu'à 50 % moins de CO2 que le charbon et 30 % moins que le pétrole, avec des émissions de particules et de soufre nettement inférieures. Bien que non carboneutre, le GNL est largement reconnu comme un carburant de transition essentiel. Nous l'avons choisi délibérément comme l'option la plus propre disponible à grande échelle aujourd'hui."
+      },
+      "cooling": {
+        "title": "Refroidissement naturel par air et eau",
+        "description": "Le climat naturellement frais du Canada nous permet d'utiliser le refroidissement par air libre pendant une grande partie de l'année, réduisant la consommation d'énergie jusqu'à 40 % par rapport au refroidissement mécanique traditionnel. C'est là que réside notre véritable avantage environnemental — un avantage qu'aucune ingénierie ne peut reproduire dans les climats plus chauds."
+      },
+      "efficiency": {
+        "title": "Ingénierie axée sur l'efficacité",
+        "description": "Nous visons un indice d'efficacité énergétique (PUE) de 1,2 ou moins — bien en dessous de la moyenne de l'industrie de 1,58. Combiné au profil d'émissions plus faible du GNL, cela signifie que chaque unité de calcul que nous livrons a une empreinte carbone plus petite que la plupart des concurrents dans le monde."
+      }
+    },
+    "banner": {
+      "title": "Le climat du Canada est notre plus grand atout",
+      "description": "Notre emplacement nordique n'est pas seulement pittoresque — c'est notre outil d'efficacité le plus puissant. Les températures ambiantes froides réduisent naturellement les besoins en refroidissement, et combinées au profil d'émissions plus faible du GNL, le résultat est l'une des opérations de centres de données les plus faibles en carbone réalisables avec la technologie éprouvée d'aujourd'hui."
+    },
+    "metrics": {
+      "pue": { "value": "1,2", "label": "PUE cible", "description": "Bien en dessous de la moyenne de l'industrie de 1,58" },
+      "cooling": { "value": "40 %", "label": "Économies de refroidissement", "description": "Énergie économisée grâce au refroidissement naturel" },
+      "co2": { "value": "50 %", "label": "Moins de CO2", "description": "Par rapport aux centres de données alimentés au charbon" }
+    }
+  },
+  "services": {
+    "label": "Ce que nous offrons",
+    "title": "Services complets de centres de données",
+    "description": "De la colocation à l'infrastructure entièrement gérée, SAIDI Canada fournit la gamme complète de services de centres de données — le tout avec notre engagement envers la durabilité et l'excellence opérationnelle.",
+    "items": {
+      "colocation": {
+        "title": "Services de colocation",
+        "description": "Espace rack sécurisé et climatisé dans nos installations Tier III+. Apportez votre propre matériel et bénéficiez de notre infrastructure résiliente d'alimentation, de refroidissement et de connectivité. Options flexibles allant des racks individuels aux cages et suites privées."
+      },
+      "cloud": {
+        "title": "Solutions infonuagiques et hybrides",
+        "description": "Cloud privé, cloud public et architectures hybrides adaptées à votre charge de travail. Notre infrastructure infonuagique fonctionne sur du matériel écoénergétique alimenté par le GNL, offrant un calcul à plus faible émission de carbone."
+      },
+      "managed": {
+        "title": "Hébergement géré",
+        "description": "Serveurs dédiés et environnements virtuels entièrement gérés. Nous gérons l'approvisionnement, les correctifs, la surveillance et la maintenance pour que vous puissiez vous concentrer sur votre activité principale."
+      },
+      "disaster": {
+        "title": "Reprise après sinistre et sauvegarde",
+        "description": "Solutions de continuité des activités avec des sites de reprise géographiquement diversifiés à travers le Canada. Sauvegardes automatisées, réplication et procédures de basculement testées."
+      },
+      "network": {
+        "title": "Réseau et connectivité",
+        "description": "Installations neutres en opérateurs avec accès aux principaux fournisseurs de réseau canadiens et internationaux. Connexions à haute bande passante et faible latence avec des chemins de fibre redondants."
+      },
+      "security": {
+        "title": "Sécurité et conformité",
+        "description": "Sécurité physique avec accès biométrique, surveillance 24/7 et contrôles de périmètre multicouches. Soutien à la conformité pour les réglementations canadiennes en matière de confidentialité, y compris LPRPDE et SOC 2."
+      }
+    }
+  },
+  "managedServices": {
+    "label": "Soutien complet",
+    "title": "Services gérés",
+    "description": "Laissez notre équipe d'ingénieurs certifiés gérer votre infrastructure de bout en bout. Nous offrons une surveillance proactive, une réponse rapide aux incidents et des conseils stratégiques — le tout soutenu par du personnel canadien disponible en tout temps.",
+    "features": [
+      "Approvisionnement, mise à l'échelle et optimisation de l'infrastructure",
+      "Surveillance proactive et réponse aux incidents 24/7",
+      "Gestion de la sécurité et détection des menaces",
+      "Gestion des sauvegardes et tests de reprise après sinistre",
+      "Correctifs du système d'exploitation et des applications",
+      "Audit et rapports de conformité",
+      "Planification de la capacité et optimisation des performances"
+    ]
+  },
+  "whySaidi": {
+    "label": "La différence SAIDI",
+    "title": "Pourquoi choisir SAIDI Canada",
+    "description": "Nous combinons des opérations de centres de données de classe mondiale avec une responsabilité environnementale transparente — offrant la fiabilité que votre entreprise exige avec une empreinte carbone réduite.",
+    "items": {
+      "carbon": {
+        "title": "Faible émission de carbone",
+        "description": "L'alimentation au GNL combinée au refroidissement naturel du Canada signifie une empreinte carbone nettement inférieure à la moyenne de l'industrie."
+      },
+      "sovereignty": {
+        "title": "Souveraineté des données canadiennes",
+        "description": "Vos données restent au Canada, protégées par certaines des lois sur la vie privée les plus strictes au monde."
+      },
+      "power": {
+        "title": "Alimentation fiable",
+        "description": "Génération redondante alimentée au GNL avec des systèmes de secours complets pour une disponibilité constante et fiable."
+      },
+      "support": {
+        "title": "Soutien canadien",
+        "description": "Équipes de soutien bilingues et expertes basées au Canada — disponibles 24/7/365."
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "Pour commencer",
+    "title": "Comment ça fonctionne",
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Consulter et concevoir",
+        "description": "Nous commençons par une évaluation approfondie de vos besoins — capacité, connectivité, conformité et objectifs de durabilité. Notre équipe conçoit une solution adaptée à vos besoins."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Déployer et connecter",
+        "description": "Votre infrastructure est provisionnée dans nos installations sécurisées et écoénergétiques. Nous gérons tout, de l'installation des racks aux interconnexions réseau, assurant une mise en service sans faille."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Gérer et évoluer",
+        "description": "Avec une surveillance et un soutien 24/7, nous maintenons vos opérations à leur performance optimale. À mesure que vos besoins grandissent, nous adaptons vos ressources de manière transparente — toujours de façon durable."
+      }
+    }
+  },
+  "cta": {
+    "title": "Prêt pour une infrastructure numérique à faible émission de carbone ?",
+    "description": "Rejoignez le nombre croissant d'entreprises canadiennes qui choisissent des solutions de centres de données plus propres. Discutons de la façon dont SAIDI Canada peut alimenter vos opérations avec une empreinte réduite.",
+    "button1": "Contacter notre équipe",
+    "button2": "Voir tous les services"
+  },
+  "contact": {
+    "label": "Nous joindre",
+    "title": "Contactez-nous",
+    "description": "Que vous recherchiez la colocation, des solutions infonuagiques ou des services gérés, notre équipe est prête à vous aider à trouver la bonne solution d'infrastructure durable.",
+    "location": {
+      "title": "Emplacement",
+      "value": "Canada"
+    },
+    "email": {
+      "title": "Courriel",
+      "value": "info@saidicanada.com"
+    },
+    "supportInfo": {
+      "title": "Soutien",
+      "value": "Soutien technique canadien disponible 24/7"
+    },
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "email": "Adresse courriel",
+      "company": "Entreprise",
+      "message": "Décrivez vos besoins en infrastructure...",
+      "submit": "Envoyer le message"
+    }
+  },
+  "footer": {
+    "description": "Services de centres de données à faible émission de carbone pour les entreprises canadiennes. Haute performance, empreinte environnementale réduite, alimenté par le GNL et l'avantage naturel de refroidissement du Canada.",
+    "services": "Services",
+    "company": "Entreprise",
+    "serviceLinks": {
+      "colocation": "Colocation",
+      "cloud": "Solutions infonuagiques",
+      "managed": "Hébergement géré",
+      "disaster": "Reprise après sinistre",
+      "network": "Services réseau"
+    },
+    "companyLinks": {
+      "about": "À propos",
+      "sustainability": "Durabilité",
+      "locations": "Emplacements",
+      "calculator": "Calculateur de coûts",
+      "contact": "Contact"
+    },
+    "copyright": "SAIDI Canada. Tous droits réservés."
+  },
+  "locations": {
+    "label": "Nos installations",
+    "title": "Emplacements des centres de données",
+    "description": "SAIDI Canada exploite et planifie des installations dans les principaux pôles technologiques du Canada, tirant parti des avantages uniques de chaque région pour une performance et une durabilité optimales.",
+    "statsBar": {
+      "facilities": "Installations",
+      "totalCapacity": "Capacité totale",
+      "provinces": "Provinces"
+    },
+    "status": {
+      "operational": "Opérationnel",
+      "underConstruction": "En construction",
+      "planned": "Planifié"
+    }
+  },
+  "calculator": {
+    "label": "Estimateur de coûts",
+    "title": "Calculateur de coûts des services",
+    "description": "Obtenez une estimation transparente pour vos besoins en centres de données. Sélectionnez vos services ci-dessous et consultez les prix en temps réel en dollars canadiens.",
+    "steps": {
+      "serviceType": "Type de service",
+      "colocation": "Colocation",
+      "dedicatedServer": "Serveur dédié",
+      "gpuCompute": "Calcul GPU",
+      "managedServices": "Services gérés"
+    },
+    "colocation": {
+      "title": "Configuration de colocation",
+      "space": "Espace",
+      "power": "Puissance additionnelle (kW)",
+      "bandwidth": "Bande passante engagée",
+      "crossConnects": "Interconnexions",
+      "quantity": "Quantité"
+    },
+    "server": {
+      "title": "Sélection de serveurs et GPU",
+      "quantity": "Qté"
+    },
+    "managed": {
+      "title": "Services gérés",
+      "perServerMonth": "/serveur/mois",
+      "addons": "Suppléments",
+      "remoteHands": "Mains à distance",
+      "managedBackup": "Sauvegarde gérée",
+      "ddosProtection": "Protection DDoS"
+    },
+    "summary": {
+      "title": "Résumé des coûts",
+      "monthlySubtotal": "Sous-total mensuel",
+      "monthlyTotal": "Total mensuel (CAD)",
+      "annualProjection": "Projection annuelle",
+      "disclaimer": "Ceci est une estimation. Contactez-nous pour un devis personnalisé.",
+      "requestQuote": "Demander un devis formel",
+      "perMonth": "/mois",
+      "perHour": "/h",
+      "perGbMonth": "/Go/mois"
+    }
+  }
+}

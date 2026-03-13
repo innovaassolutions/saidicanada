@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "home": {
+      "title": "SAIDI Canada | 低碳数据中心服务",
+      "description": "SAIDI Canada 提供由液化天然气驱动的高性能数据中心服务，结合加拿大天然冷却优势。"
+    },
+    "about": {
+      "title": "关于我们 | SAIDI Canada",
+      "description": "了解 SAIDI Canada 在加拿大各地提供低碳数据中心服务的使命。"
+    },
+    "services": {
+      "title": "服务 | SAIDI Canada",
+      "description": "全面的数据中心服务：托管、云计算、托管主机、灾难恢复等。"
+    },
+    "locations": {
+      "title": "设施位置 | SAIDI Canada",
+      "description": "SAIDI Canada 在加拿大各地的数据中心位置——多伦多、蒙特利尔、卡尔加里和温哥华。"
+    },
+    "sustainability": {
+      "title": "可持续发展 | SAIDI Canada",
+      "description": "我们通过液化天然气电力和自然冷却，致力于低碳数据中心运营。"
+    },
+    "contact": {
+      "title": "联系我们 | SAIDI Canada",
+      "description": "联系 SAIDI Canada 了解托管、云计算和托管数据中心服务。"
+    },
+    "calculator": {
+      "title": "成本计算器 | SAIDI Canada",
+      "description": "使用我们透明的价格计算器估算您的数据中心成本。"
+    }
+  },
+  "nav": {
+    "about": "关于",
+    "services": "服务",
+    "sustainability": "可持续发展",
+    "locations": "设施位置",
+    "calculator": "计算器",
+    "contact": "联系",
+    "getStarted": "立即开始"
+  },
+  "hero": {
+    "badge": "加拿大低碳基础设施",
+    "title": "驱动未来，",
+    "titleHighlight": "减少影响",
+    "description": "SAIDI Canada 提供企业级数据中心服务，采用天然气——最清洁的化石燃料——结合加拿大天然冷却优势。高性能，低碳排放。",
+    "cta1": "探索我们的服务",
+    "cta2": "我们的绿色承诺"
+  },
+  "about": {
+    "label": "关于 SAIDI Canada",
+    "title": "卓越的数据中心，根植于加拿大价值观",
+    "p1": "加拿大在支持全球数据中心行业方面具有独特优势。凭借大幅降低冷却成本的天然凉爽气候、丰富的天然气资源以及世界上最严格的环境法规，我们的国家为数字基础设施提供了负责任的基础。",
+    "p2": "SAIDI Canada 的设施主要由液化天然气（LNG）供电——最清洁的化石燃料，与煤炭相比减少高达 50% 的二氧化碳排放，比石油减少 30%。结合加拿大的寒冷气候和我们对运营效率的承诺，我们提供的数据中心服务碳足迹远低于行业标准。",
+    "stats": {
+      "co2": { "value": "~50%", "label": "比煤炭减少CO2" },
+      "uptime": { "value": "99.99%", "label": "运行时间SLA" },
+      "support": { "value": "24/7", "label": "专家支持" },
+      "tier": { "value": "Tier III+", "label": "设施设计" }
+    }
+  },
+  "sustainability": {
+    "label": "我们的承诺",
+    "title": "更清洁的数据中心能源方案",
+    "description": "数据中心行业约占全球电力消耗的 1-1.5%，且这一数字仍在上升。我们坦诚面对挑战：我们的设施使用液化天然气，一种化石燃料。但它是目前最清洁的选择，结合加拿大天然冷却优势和我们以效率为先的工程理念，这代表着向低碳数字基础设施迈出的重要一步——是现在，不是未来。",
+    "cards": {
+      "lng": {
+        "title": "液化天然气：更清洁的过渡燃料",
+        "description": "天然气比煤炭减少高达 50% 的二氧化碳排放，比石油减少 30%，颗粒物和硫排放也显著降低。虽然并非零碳，但液化天然气被广泛认为是关键的过渡燃料。我们特意选择它作为当今大规模可用的最清洁选择。"
+      },
+      "cooling": {
+        "title": "自然空气和水冷却",
+        "description": "加拿大天然凉爽的气候使我们能够在一年中的大部分时间使用自然空气冷却，与传统机械冷却相比，能耗降低高达 40%。这是我们真正的环境优势所在——这是温暖气候中无论多少工程技术都无法复制的优势。"
+      },
+      "efficiency": {
+        "title": "效率优先工程",
+        "description": "我们的目标是将电力使用效率（PUE）控制在 1.2 或更低——远低于行业平均水平 1.58。结合液化天然气较低的排放特征，这意味着我们交付的每一单位计算的碳足迹都低于全球大多数竞争对手。"
+      }
+    },
+    "banner": {
+      "title": "加拿大的气候是我们最大的资产",
+      "description": "我们的北方位置不仅仅是风景优美——它是我们最强大的效率工具。寒冷的环境温度自然减少冷却需求，结合液化天然气较低的排放特征，结果是当今成熟技术所能实现的最低碳数据中心运营之一。"
+    },
+    "metrics": {
+      "pue": { "value": "1.2", "label": "目标 PUE", "description": "远低于行业平均水平 1.58" },
+      "cooling": { "value": "40%", "label": "冷却节能", "description": "通过自然冷却节省的能源" },
+      "co2": { "value": "50%", "label": "减少 CO2", "description": "与燃煤数据中心相比" }
+    }
+  },
+  "services": {
+    "label": "我们的服务",
+    "title": "全面的数据中心服务",
+    "description": "从托管到全面管理的基础设施，SAIDI Canada 提供完整的数据中心服务——所有服务均体现我们对可持续发展和卓越运营的承诺。",
+    "items": {
+      "colocation": {
+        "title": "托管服务",
+        "description": "在我们的 Tier III+ 设施中提供安全、气候控制的机架空间。携带您自己的硬件，享受我们弹性的电力、冷却和连接基础设施。灵活选项从单个机架到私人机柜和套间。"
+      },
+      "cloud": {
+        "title": "云计算与混合解决方案",
+        "description": "根据您的工作负载定制的私有云、公有云和混合架构。我们的云基础设施运行在由液化天然气驱动的节能硬件上，提供更低碳的计算服务。"
+      },
+      "managed": {
+        "title": "托管主机",
+        "description": "全面托管的专用服务器和虚拟环境。我们处理配置、补丁、监控和维护，让您可以专注于核心业务。"
+      },
+      "disaster": {
+        "title": "灾难恢复与备份",
+        "description": "在加拿大各地设有地理多样化恢复站点的业务连续性解决方案。自动备份、复制和经过测试的故障转移程序确保您的数据始终受到保护。"
+      },
+      "network": {
+        "title": "网络与连接",
+        "description": "运营商中立的设施，接入主要的加拿大和国际网络提供商。高带宽、低延迟连接，冗余光纤路径和与领先云平台的直接对等。"
+      },
+      "security": {
+        "title": "安全与合规",
+        "description": "生物识别访问控制、24/7 监控和多层周界管控的物理安全。支持加拿大隐私法规合规，包括 PIPEDA、省级健康数据要求和 SOC 2。"
+      }
+    }
+  },
+  "managedServices": {
+    "label": "全方位支持",
+    "title": "托管服务",
+    "description": "让我们的认证工程师团队端到端管理您的基础设施。我们提供主动监控、快速事件响应和战略指导——所有服务均由全天候可用的加拿大支持人员提供。",
+    "features": [
+      "基础设施配置、扩展和优化",
+      "24/7 主动监控和事件响应",
+      "安全管理和威胁检测",
+      "备份管理和灾难恢复测试",
+      "操作系统和应用程序补丁",
+      "合规审计和报告",
+      "容量规划和性能调优"
+    ]
+  },
+  "whySaidi": {
+    "label": "SAIDI 的不同",
+    "title": "为什么选择 SAIDI Canada",
+    "description": "我们将世界级的数据中心运营与透明的环境责任相结合——以更低的碳足迹提供您的业务所需的可靠性。",
+    "items": {
+      "carbon": {
+        "title": "低碳排放",
+        "description": "液化天然气电力加上加拿大天然冷却意味着碳足迹远低于行业平均水平。"
+      },
+      "sovereignty": {
+        "title": "加拿大数据主权",
+        "description": "您的数据留在加拿大，受世界上最严格的隐私法保护。"
+      },
+      "power": {
+        "title": "可靠电力",
+        "description": "冗余的液化天然气发电，配备完整的备用系统，确保持续、可靠的运行时间。"
+      },
+      "support": {
+        "title": "加拿大支持",
+        "description": "驻加拿大的双语专家支持团队——全年 24/7/365 可用。"
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "开始使用",
+    "title": "运作方式",
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "咨询与设计",
+        "description": "我们从全面评估您的需求开始——容量、连接、合规和可持续发展目标。我们的团队为您设计量身定制的解决方案。"
+      },
+      "step2": {
+        "number": "02",
+        "title": "部署与连接",
+        "description": "您的基础设施在我们安全、节能的设施中配置。我们处理从机架安装到网络交叉连接的一切，确保无缝上线。"
+      },
+      "step3": {
+        "number": "03",
+        "title": "管理与扩展",
+        "description": "通过 24/7 监控和支持，我们保持您的运营处于最佳性能。随着您的需求增长，我们无缝扩展您的资源——始终可持续。"
+      }
+    }
+  },
+  "cta": {
+    "title": "准备好迎接低碳数字基础设施了吗？",
+    "description": "加入越来越多选择更清洁数据中心解决方案的加拿大企业。让我们讨论 SAIDI Canada 如何以更小的碳足迹为您的运营提供动力。",
+    "button1": "联系我们的团队",
+    "button2": "查看所有服务"
+  },
+  "contact": {
+    "label": "联系我们",
+    "title": "联系方式",
+    "description": "无论您正在寻找托管、云解决方案还是托管服务，我们的团队都准备好帮助您找到合适的可持续基础设施解决方案。",
+    "location": {
+      "title": "位置",
+      "value": "加拿大"
+    },
+    "email": {
+      "title": "电子邮件",
+      "value": "info@saidicanada.com"
+    },
+    "supportInfo": {
+      "title": "支持",
+      "value": "24/7 加拿大本地技术支持"
+    },
+    "form": {
+      "firstName": "名",
+      "lastName": "姓",
+      "email": "电子邮件地址",
+      "company": "公司",
+      "message": "请描述您的基础设施需求...",
+      "submit": "发送消息"
+    }
+  },
+  "footer": {
+    "description": "为加拿大企业提供低碳数据中心服务。高性能，更小的环境足迹，由液化天然气和加拿大天然冷却优势驱动。",
+    "services": "服务",
+    "company": "公司",
+    "serviceLinks": {
+      "colocation": "托管",
+      "cloud": "云解决方案",
+      "managed": "托管主机",
+      "disaster": "灾难恢复",
+      "network": "网络服务"
+    },
+    "companyLinks": {
+      "about": "关于我们",
+      "sustainability": "可持续发展",
+      "locations": "设施位置",
+      "calculator": "成本计算器",
+      "contact": "联系方式"
+    },
+    "copyright": "SAIDI Canada. 版权所有。"
+  },
+  "locations": {
+    "label": "我们的设施",
+    "title": "数据中心位置",
+    "description": "SAIDI Canada 在加拿大主要科技中心运营和规划设施，利用每个地区的独特优势实现最佳性能和可持续发展。",
+    "statsBar": {
+      "facilities": "设施",
+      "totalCapacity": "总容量",
+      "provinces": "省份"
+    },
+    "status": {
+      "operational": "运营中",
+      "underConstruction": "建设中",
+      "planned": "规划中"
+    }
+  },
+  "calculator": {
+    "label": "成本估算",
+    "title": "服务成本计算器",
+    "description": "获取您数据中心需求的透明估算。选择下方的服务，实时查看加元定价。",
+    "steps": {
+      "serviceType": "服务类型",
+      "colocation": "托管",
+      "dedicatedServer": "专用服务器",
+      "gpuCompute": "GPU 计算",
+      "managedServices": "托管服务"
+    },
+    "colocation": {
+      "title": "托管配置",
+      "space": "空间",
+      "power": "额外电力 (kW)",
+      "bandwidth": "承诺带宽",
+      "crossConnects": "交叉连接",
+      "quantity": "数量"
+    },
+    "server": {
+      "title": "服务器和 GPU 选择",
+      "quantity": "数量"
+    },
+    "managed": {
+      "title": "托管服务",
+      "perServerMonth": "/服务器/月",
+      "addons": "附加服务",
+      "remoteHands": "远程操作",
+      "managedBackup": "托管备份",
+      "ddosProtection": "DDoS 防护"
+    },
+    "summary": {
+      "title": "成本摘要",
+      "monthlySubtotal": "月度小计",
+      "monthlyTotal": "月度总计 (CAD)",
+      "annualProjection": "年度预测",
+      "disclaimer": "这是一个估算。联系我们获取定制报价。",
+      "requestQuote": "申请正式报价",
+      "perMonth": "/月",
+      "perHour": "/小时",
+      "perGbMonth": "/GB/月"
+    }
+  }
+}

@@ -1,32 +1,57 @@
 "use client";
 
-export default function ContactForm() {
+interface ContactFormProps {
+  dictionary?: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    company: string;
+    message: string;
+    submit: string;
+  };
+}
+
+export default function ContactForm({ dictionary }: ContactFormProps) {
+  const d = dictionary ?? {
+    firstName: "First name",
+    lastName: "Last name",
+    email: "Email address",
+    company: "Company",
+    message: "Tell us about your infrastructure needs...",
+    submit: "Send Message",
+  };
+
   return (
     <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
       <div className="grid grid-cols-2 gap-4">
         <input
           type="text"
-          placeholder="First name"
+          placeholder={d.firstName}
+          aria-label={d.firstName}
           className="bg-white border border-sage/20 rounded-lg px-4 py-3 text-warm-gray placeholder:text-warm-gray/50 focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest"
         />
         <input
           type="text"
-          placeholder="Last name"
+          placeholder={d.lastName}
+          aria-label={d.lastName}
           className="bg-white border border-sage/20 rounded-lg px-4 py-3 text-warm-gray placeholder:text-warm-gray/50 focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest"
         />
       </div>
       <input
         type="email"
-        placeholder="Email address"
+        placeholder={d.email}
+        aria-label={d.email}
         className="w-full bg-white border border-sage/20 rounded-lg px-4 py-3 text-warm-gray placeholder:text-warm-gray/50 focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest"
       />
       <input
         type="text"
-        placeholder="Company"
+        placeholder={d.company}
+        aria-label={d.company}
         className="w-full bg-white border border-sage/20 rounded-lg px-4 py-3 text-warm-gray placeholder:text-warm-gray/50 focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest"
       />
       <textarea
-        placeholder="Tell us about your infrastructure needs..."
+        placeholder={d.message}
+        aria-label={d.message}
         rows={4}
         className="w-full bg-white border border-sage/20 rounded-lg px-4 py-3 text-warm-gray placeholder:text-warm-gray/50 focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest resize-none"
       />
@@ -34,7 +59,7 @@ export default function ContactForm() {
         type="submit"
         className="w-full bg-forest text-white py-3.5 rounded-lg font-semibold hover:bg-forest-light transition-colors"
       >
-        Send Message
+        {d.submit}
       </button>
     </form>
   );

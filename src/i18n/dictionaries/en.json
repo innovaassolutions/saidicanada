@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "home": {
+      "title": "SAIDI Canada | Lower-Carbon Data Centre Services",
+      "description": "SAIDI Canada delivers high-performance data centre services powered by LNG and Canada's natural cooling advantage."
+    },
+    "about": {
+      "title": "About | SAIDI Canada",
+      "description": "Learn about SAIDI Canada's mission to deliver lower-carbon data centre services across Canada."
+    },
+    "services": {
+      "title": "Services | SAIDI Canada",
+      "description": "Comprehensive data centre services: colocation, cloud, managed hosting, disaster recovery, and more."
+    },
+    "locations": {
+      "title": "Locations | SAIDI Canada",
+      "description": "SAIDI Canada data centre locations across Canada — Toronto, Montreal, Calgary, and Vancouver."
+    },
+    "sustainability": {
+      "title": "Sustainability | SAIDI Canada",
+      "description": "Our commitment to lower-carbon data centre operations through LNG power and natural cooling."
+    },
+    "contact": {
+      "title": "Contact | SAIDI Canada",
+      "description": "Get in touch with SAIDI Canada for colocation, cloud, and managed data centre services."
+    },
+    "calculator": {
+      "title": "Cost Calculator | SAIDI Canada",
+      "description": "Estimate your data centre costs with our transparent pricing calculator."
+    }
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "sustainability": "Sustainability",
+    "locations": "Locations",
+    "calculator": "Calculator",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Lower-Carbon Infrastructure for Canada",
+    "title": "Powering the Future,",
+    "titleHighlight": "Reducing the Impact",
+    "description": "SAIDI Canada delivers enterprise-grade data centre services powered by natural gas — the cleanest-burning fossil fuel — combined with Canada's natural cooling advantage. High performance, lower footprint.",
+    "cta1": "Explore Our Services",
+    "cta2": "Our Green Commitment"
+  },
+  "about": {
+    "label": "About SAIDI Canada",
+    "title": "Data Centre Excellence, Rooted in Canadian Values",
+    "p1": "Canada is uniquely positioned to support the global data centre industry. With a naturally cool climate that dramatically reduces cooling costs, abundant natural gas resources, and some of the strongest environmental regulations in the world, our nation provides a responsible foundation for digital infrastructure.",
+    "p2": "SAIDI Canada's facilities are powered primarily by liquefied natural gas (LNG) — the cleanest-burning fossil fuel, producing up to 50% less CO2 than coal and 30% less than oil. Combined with Canada's cold climate and our commitment to operational efficiency, we deliver data centre services with a significantly lower carbon footprint than the industry norm.",
+    "stats": {
+      "co2": { "value": "~50%", "label": "Less CO2 Than Coal" },
+      "uptime": { "value": "99.99%", "label": "Uptime SLA" },
+      "support": { "value": "24/7", "label": "Expert Support" },
+      "tier": { "value": "Tier III+", "label": "Facility Design" }
+    }
+  },
+  "sustainability": {
+    "label": "Our Commitment",
+    "title": "A Cleaner Approach to Data Centre Energy",
+    "description": "The data centre industry accounts for roughly 1-1.5% of global electricity consumption, and that figure is rising. We're honest about the challenge: our facilities run on LNG, a fossil fuel. But it's the cleanest-burning one available, and when combined with Canada's natural cooling advantage and our efficiency-first engineering, it represents a meaningful step toward lower-carbon digital infrastructure — today, not someday.",
+    "cards": {
+      "lng": {
+        "title": "LNG: A Cleaner Bridge Fuel",
+        "description": "Natural gas produces up to 50% less CO2 than coal and 30% less than oil, with significantly lower particulate and sulphur emissions. While not zero-carbon, LNG is widely recognized as a critical transition fuel as the industry works toward renewable alternatives. We chose it deliberately as the cleanest option available at scale today."
+      },
+      "cooling": {
+        "title": "Free-Air & Water Cooling",
+        "description": "Canada's naturally cool climate allows us to use free-air cooling for much of the year, cutting energy consumption by up to 40% compared to traditional mechanical cooling. This is where our real environmental advantage lies — a benefit no amount of engineering can replicate in warmer climates."
+      },
+      "efficiency": {
+        "title": "Efficiency-First Engineering",
+        "description": "We target a Power Usage Effectiveness (PUE) of 1.2 or lower — well below the industry average of 1.58. Combined with LNG's lower emissions profile, this means every unit of computing we deliver has a smaller carbon footprint than most competitors worldwide."
+      }
+    },
+    "banner": {
+      "title": "Canada's Climate Is Our Greatest Asset",
+      "description": "Our northern location isn't just scenic — it's our most powerful efficiency tool. Cold ambient temperatures slash cooling demands naturally, and when paired with LNG's lower emissions profile, the result is one of the lowest-carbon data centre operations achievable with today's proven technology."
+    },
+    "metrics": {
+      "pue": { "value": "1.2", "label": "Target PUE", "description": "Well below the industry average of 1.58" },
+      "cooling": { "value": "40%", "label": "Cooling Savings", "description": "Energy saved through free-air cooling" },
+      "co2": { "value": "50%", "label": "Less CO2", "description": "Compared to coal-powered data centres" }
+    }
+  },
+  "services": {
+    "label": "What We Offer",
+    "title": "Comprehensive Data Centre Services",
+    "description": "From colocation to fully managed infrastructure, SAIDI Canada provides the full spectrum of data centre services — all delivered with our commitment to sustainability and operational excellence.",
+    "items": {
+      "colocation": {
+        "title": "Colocation Services",
+        "description": "Secure, climate-controlled rack space in our Tier III+ facilities. Bring your own hardware and benefit from our resilient power, cooling, and connectivity infrastructure. Flexible options from single racks to private cages and suites."
+      },
+      "cloud": {
+        "title": "Cloud & Hybrid Solutions",
+        "description": "Private cloud, public cloud, and hybrid architectures tailored to your workload. Our cloud infrastructure runs on energy-efficient hardware powered by LNG, delivering lower-carbon computing compared to coal or oil-dependent alternatives."
+      },
+      "managed": {
+        "title": "Managed Hosting",
+        "description": "Fully managed dedicated servers and virtual environments. We handle provisioning, patching, monitoring, and maintenance so you can focus on your core business without worrying about infrastructure."
+      },
+      "disaster": {
+        "title": "Disaster Recovery & Backup",
+        "description": "Business continuity solutions with geographically diverse recovery sites across Canada. Automated backups, replication, and tested failover procedures ensure your data is always protected and recoverable."
+      },
+      "network": {
+        "title": "Network & Connectivity",
+        "description": "Carrier-neutral facilities with access to major Canadian and international network providers. High-bandwidth, low-latency connections with redundant fibre paths and direct peering with leading cloud platforms."
+      },
+      "security": {
+        "title": "Security & Compliance",
+        "description": "Physical security with biometric access, 24/7 surveillance, and multi-layer perimeter controls. Compliance support for Canadian privacy regulations including PIPEDA, provincial health data requirements, and SOC 2."
+      }
+    }
+  },
+  "managedServices": {
+    "label": "Full-Service Support",
+    "title": "Managed Services",
+    "description": "Let our team of certified engineers manage your infrastructure end-to-end. We offer proactive monitoring, rapid incident response, and strategic guidance — all backed by Canadian-based support staff available around the clock.",
+    "features": [
+      "Infrastructure provisioning, scaling, and optimization",
+      "24/7 proactive monitoring and incident response",
+      "Security management and threat detection",
+      "Backup management and disaster recovery testing",
+      "Operating system and application patching",
+      "Compliance auditing and reporting",
+      "Capacity planning and performance tuning"
+    ]
+  },
+  "whySaidi": {
+    "label": "The SAIDI Difference",
+    "title": "Why Choose SAIDI Canada",
+    "description": "We combine world-class data centre operations with transparent environmental responsibility — delivering the reliability your business demands with a lower carbon footprint.",
+    "items": {
+      "carbon": {
+        "title": "Lower Carbon",
+        "description": "LNG power plus Canada's natural cooling means a significantly smaller carbon footprint than the industry average."
+      },
+      "sovereignty": {
+        "title": "Canadian Data Sovereignty",
+        "description": "Your data stays in Canada, protected by some of the world's strongest privacy laws."
+      },
+      "power": {
+        "title": "Reliable Power",
+        "description": "Redundant LNG-powered generation with full backup systems for consistent, dependable uptime."
+      },
+      "support": {
+        "title": "Canadian Support",
+        "description": "Bilingual, expert support teams based in Canada — available 24/7/365."
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "Getting Started",
+    "title": "How It Works",
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Consult & Design",
+        "description": "We begin with a thorough assessment of your requirements — capacity, connectivity, compliance, and sustainability goals. Our team designs a solution tailored to your needs."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Deploy & Connect",
+        "description": "Your infrastructure is provisioned in our secure, energy-efficient facilities. We handle everything from rack installation to network cross-connects, ensuring a seamless go-live."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Manage & Scale",
+        "description": "With 24/7 monitoring and support, we keep your operations running at peak performance. As your needs grow, we scale your resources seamlessly — always sustainably."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready for Lower-Carbon Digital Infrastructure?",
+    "description": "Join the growing number of Canadian businesses choosing cleaner data centre solutions. Let's discuss how SAIDI Canada can power your operations with a smaller footprint.",
+    "button1": "Contact Our Team",
+    "button2": "View All Services"
+  },
+  "contact": {
+    "label": "Get In Touch",
+    "title": "Contact Us",
+    "description": "Whether you're looking for colocation, cloud solutions, or managed services, our team is ready to help you find the right sustainable infrastructure solution.",
+    "location": {
+      "title": "Location",
+      "value": "Canada"
+    },
+    "email": {
+      "title": "Email",
+      "value": "info@saidicanada.com"
+    },
+    "supportInfo": {
+      "title": "Support",
+      "value": "24/7 Canadian-based technical support"
+    },
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "company": "Company",
+      "message": "Tell us about your infrastructure needs...",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "description": "Lower-carbon data centre services for Canadian businesses. High performance, smaller environmental footprint, powered by LNG and Canada's natural cooling advantage.",
+    "services": "Services",
+    "company": "Company",
+    "serviceLinks": {
+      "colocation": "Colocation",
+      "cloud": "Cloud Solutions",
+      "managed": "Managed Hosting",
+      "disaster": "Disaster Recovery",
+      "network": "Network Services"
+    },
+    "companyLinks": {
+      "about": "About Us",
+      "sustainability": "Sustainability",
+      "locations": "Locations",
+      "calculator": "Cost Calculator",
+      "contact": "Contact"
+    },
+    "copyright": "SAIDI Canada. All rights reserved."
+  },
+  "locations": {
+    "label": "Our Facilities",
+    "title": "Data Centre Locations",
+    "description": "SAIDI Canada operates and plans facilities across Canada's major technology hubs, leveraging each region's unique advantages for optimal performance and sustainability.",
+    "statsBar": {
+      "facilities": "Facilities",
+      "totalCapacity": "Total Capacity",
+      "provinces": "Provinces"
+    },
+    "status": {
+      "operational": "Operational",
+      "underConstruction": "Under Construction",
+      "planned": "Planned"
+    }
+  },
+  "calculator": {
+    "label": "Cost Estimator",
+    "title": "Services Cost Calculator",
+    "description": "Get a transparent estimate for your data centre needs. Select your services below and see real-time pricing in Canadian dollars.",
+    "steps": {
+      "serviceType": "Service Type",
+      "colocation": "Colocation",
+      "dedicatedServer": "Dedicated Server",
+      "gpuCompute": "GPU Compute",
+      "managedServices": "Managed Services"
+    },
+    "colocation": {
+      "title": "Colocation Configuration",
+      "space": "Space",
+      "power": "Additional Power (kW)",
+      "bandwidth": "Committed Bandwidth",
+      "crossConnects": "Cross-Connects",
+      "quantity": "Quantity"
+    },
+    "server": {
+      "title": "Server & GPU Selection",
+      "quantity": "Qty"
+    },
+    "managed": {
+      "title": "Managed Services",
+      "perServerMonth": "/server/mo",
+      "addons": "Add-ons",
+      "remoteHands": "Remote Hands",
+      "managedBackup": "Managed Backup",
+      "ddosProtection": "DDoS Protection"
+    },
+    "summary": {
+      "title": "Cost Summary",
+      "monthlySubtotal": "Monthly Subtotal",
+      "monthlyTotal": "Monthly Total (CAD)",
+      "annualProjection": "Annual Projection",
+      "disclaimer": "This is an estimate. Contact us for a custom quote.",
+      "requestQuote": "Request Formal Quote",
+      "perMonth": "/mo",
+      "perHour": "/hr",
+      "perGbMonth": "/GB/mo"
+    }
+  }
+}
