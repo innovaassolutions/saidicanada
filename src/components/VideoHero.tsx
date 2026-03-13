@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 interface VideoHeroProps {
@@ -24,50 +24,49 @@ export default function VideoHero({
   cta1Href,
   cta2Href,
 }: VideoHeroProps) {
-  const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [posterError, setPosterError] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
+    setMounted(true);
     setPrefersReducedMotion(
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
     );
-
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const showVideo = !isMobile && !prefersReducedMotion && !videoError;
+  const showVideo = mounted && !prefersReducedMotion && !videoError;
   const fallbackSrc = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80';
+  const posterSrc = posterError ? fallbackSrc : '/videos/hero-poster.jpg';
 
   return (
     <section className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0">
-        {showVideo ? (
+        {/* Always render poster image for instant display + mobile */}
+        <Image
+          src={posterSrc}
+          alt="SAIDI Canada data centre"
+          fill
+          className="object-cover"
+          priority
+          onError={() => setPosterError(true)}
+        />
+        {/* Layer video on top when available — works on both desktop and mobile */}
+        {showVideo && (
           <video
+            ref={videoRef}
             autoPlay
             muted
             loop
             playsInline
-            poster="/videos/hero-poster.jpg"
+            poster={posterSrc}
             className="absolute inset-0 w-full h-full object-cover"
             onError={() => setVideoError(true)}
-            onStalled={() => setVideoError(true)}
           >
             <source src="/videos/hero.mp4" type="video/mp4" />
           </video>
-        ) : (
-          <Image
-            src={posterError ? fallbackSrc : '/videos/hero-poster.jpg'}
-            alt="SAIDI Canada data centre"
-            fill
-            className="object-cover"
-            priority
-            onError={() => setPosterError(true)}
-          />
         )}
         <div className="absolute inset-0 bg-gradient-to-r from-forest-dark/80 via-forest/60 to-transparent" />
       </div>

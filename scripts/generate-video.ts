@@ -48,31 +48,28 @@ async function main() {
     try {
       let operation = await ai.models.generateVideos({
         model: "veo-3.1-generate-preview",
-        request: {
-          prompt: VIDEO_PROMPT,
-        },
+        prompt: VIDEO_PROMPT,
       });
 
       // Poll for completion
       while (!operation.done) {
         console.log("[WAITING] Video generation in progress...");
         await new Promise((resolve) => setTimeout(resolve, 10000));
-        operation = await ai.operations.get({ operationName: operation.name! });
+        operation = await ai.operations.getVideosOperation({
+          operation: operation,
+        });
       }
 
       // Save the generated video
-      if (operation.response?.generatedVideos) {
-        for (const video of operation.response.generatedVideos) {
-          if (video.video?.uri) {
-            const response = await fetch(video.video.uri);
-            const buffer = Buffer.from(await response.arrayBuffer());
-            fs.writeFileSync(OUTPUT_PATH, buffer);
-            console.log(
-              `[SAVED] ${OUTPUT_PATH} (${(buffer.length / (1024 * 1024)).toFixed(1)} MB)`
-            );
-            break;
-          }
-        }
+      if (operation.response?.generatedVideos?.[0]?.video) {
+        await ai.files.download({
+          file: operation.response.generatedVideos[0].video,
+          downloadPath: OUTPUT_PATH,
+        });
+        const stats = fs.statSync(OUTPUT_PATH);
+        console.log(
+          `[SAVED] ${OUTPUT_PATH} (${(stats.size / (1024 * 1024)).toFixed(1)} MB)`
+        );
       } else {
         console.warn("[WARN] No video generated");
       }
