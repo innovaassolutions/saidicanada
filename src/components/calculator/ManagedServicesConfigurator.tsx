@@ -11,6 +11,7 @@ interface Props {
     remoteHands: string;
     managedBackup: string;
     ddosProtection: string;
+    serverCount: string;
   };
   selection: ManagedSelection;
   onUpdate: (selection: ManagedSelection) => void;
@@ -50,7 +51,7 @@ export default function ManagedServicesConfigurator({ dictionary, selection, onU
         {selection.tierId && (
           <div>
             <label className="block text-sm font-medium text-warm-gray mb-2">
-              Number of Servers
+              {dictionary.serverCount}
             </label>
             <input
               type="number"

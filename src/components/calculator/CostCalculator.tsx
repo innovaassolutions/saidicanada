@@ -45,6 +45,7 @@ interface CostCalculatorProps {
         remoteHands: string;
         managedBackup: string;
         ddosProtection: string;
+        serverCount: string;
       };
       summary: {
         title: string;
@@ -56,6 +57,9 @@ interface CostCalculatorProps {
         perMonth: string;
         perHour: string;
         perGbMonth: string;
+        categoryColocation: string;
+        categoryServer: string;
+        categoryManaged: string;
       };
     };
   };
@@ -212,6 +216,11 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
         totalMonthly={totalMonthly}
         hasSelections={activeServices.size > 0}
         locale={locale}
+        categoryLabels={{
+          colocation: d.summary.categoryColocation,
+          server: d.summary.categoryServer,
+          managed: d.summary.categoryManaged,
+        }}
       />
     </div>
   );

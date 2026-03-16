@@ -270,7 +270,8 @@
       "addons": "附加服务",
       "remoteHands": "远程操作",
       "managedBackup": "托管备份",
-      "ddosProtection": "DDoS 防护"
+      "ddosProtection": "DDoS 防护",
+      "serverCount": "服务器数量"
     },
     "summary": {
       "title": "成本摘要",
@@ -281,7 +282,10 @@
       "requestQuote": "申请正式报价",
       "perMonth": "/月",
       "perHour": "/小时",
-      "perGbMonth": "/GB/月"
+      "perGbMonth": "/GB/月",
+      "categoryColocation": "托管",
+      "categoryServer": "服务器和 GPU",
+      "categoryManaged": "托管服务"
     }
   }
 }

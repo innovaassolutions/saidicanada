@@ -270,7 +270,8 @@
       "addons": "Suppléments",
       "remoteHands": "Mains à distance",
       "managedBackup": "Sauvegarde gérée",
-      "ddosProtection": "Protection DDoS"
+      "ddosProtection": "Protection DDoS",
+      "serverCount": "Nombre de serveurs"
     },
     "summary": {
       "title": "Résumé des coûts",
@@ -281,7 +282,10 @@
       "requestQuote": "Demander un devis formel",
       "perMonth": "/mois",
       "perHour": "/h",
-      "perGbMonth": "/Go/mois"
+      "perGbMonth": "/Go/mois",
+      "categoryColocation": "Colocation",
+      "categoryServer": "Serveurs et GPU",
+      "categoryManaged": "Services gérés"
     }
   }
 }

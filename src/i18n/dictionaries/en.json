@@ -270,7 +270,8 @@
       "addons": "Add-ons",
       "remoteHands": "Remote Hands",
       "managedBackup": "Managed Backup",
-      "ddosProtection": "DDoS Protection"
+      "ddosProtection": "DDoS Protection",
+      "serverCount": "Number of Servers"
     },
     "summary": {
       "title": "Cost Summary",
@@ -281,7 +282,10 @@
       "requestQuote": "Request Formal Quote",
       "perMonth": "/mo",
       "perHour": "/hr",
-      "perGbMonth": "/GB/mo"
+      "perGbMonth": "/GB/mo",
+      "categoryColocation": "Colocation",
+      "categoryServer": "Servers & GPU",
+      "categoryManaged": "Managed Services"
     }
   }
 }
