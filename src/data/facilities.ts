@@ -11,7 +11,10 @@ export interface Facility {
   connectivity: string[];
   certifications: string[];
   cooling: string;
+  powerRedundancy: string;
+  networkRedundancy: string;
   status: 'operational' | 'under-construction' | 'planned';
+  images?: string[];
 }
 
 export const facilities: Facility[] = [
@@ -28,6 +31,8 @@ export const facilities: Facility[] = [
     connectivity: ['Equinix IX', 'TorIX', 'Rogers', 'Bell', 'Telus', 'Zayo'],
     certifications: ['SOC 2 Type II', 'ISO 27001', 'PIPEDA Compliant'],
     cooling: 'Free-air + evaporative hybrid',
+    powerRedundancy: '2N UPS, Dual utility feeds, Diesel generators',
+    networkRedundancy: 'Diverse fiber entry, redundant core switches, dual WAN',
     status: 'operational',
   },
   {
@@ -43,22 +48,34 @@ export const facilities: Facility[] = [
     connectivity: ['QIX', 'Bell', 'Vidéotron', 'Cogeco', 'Hurricane Electric'],
     certifications: ['SOC 2 Type II', 'ISO 27001', 'Loi 25 Compliant'],
     cooling: 'Free-air + river water cooling',
+    powerRedundancy: '2N UPS, Dual Hydro-Québec feeds, Diesel generators',
+    networkRedundancy: 'Diverse fiber entry, redundant core switches',
     status: 'operational',
   },
   {
-    id: 'yyc-1',
-    name: 'SAIDI Calgary',
-    city: 'Calgary',
+    id: 'yeg-1',
+    name: 'SAIDI Edmonton',
+    city: 'Edmonton',
     province: 'Alberta',
-    coordinates: [51.0447, -114.0719],
+    coordinates: [53.5461, -113.4937],
     tier: 'Tier III',
     totalPowerMW: 15,
     pue: 1.12,
     rackCapacity: 600,
-    connectivity: ['YYCIX', 'Shaw', 'Telus', 'Bell', 'Zayo'],
+    connectivity: ['YEGIX', 'Shaw', 'Telus', 'Bell', 'Zayo'],
     certifications: ['SOC 2 Type II', 'ISO 27001'],
     cooling: 'Free-air dominant (10+ months/year)',
+    powerRedundancy: '2N UPS, Dual utility feeds, LNG generators, 48hr fuel reserve',
+    networkRedundancy: 'Diverse fiber entry, redundant core switches, dark fiber ring',
     status: 'under-construction',
+    images: [
+      '/images/10MW_datacenter/WechatIMG1140.jpg',
+      '/images/10MW_datacenter/WechatIMG1130.jpg',
+      '/images/10MW_datacenter/WechatIMG1150.jpg',
+      '/images/10MW_datacenter/WechatIMG1142.jpg',
+      '/images/10MW_datacenter/WechatIMG1135.jpg',
+      '/images/10MW_datacenter/WechatIMG1148.jpg',
+    ],
   },
   {
     id: 'yvr-1',
@@ -73,6 +90,8 @@ export const facilities: Facility[] = [
     connectivity: ['VANIX', 'Telus', 'Shaw', 'Zayo', 'Pacific Crossing'],
     certifications: ['SOC 2 Type II'],
     cooling: 'Free-air + seawater cooling',
+    powerRedundancy: '2N UPS, Dual BC Hydro feeds, Diesel generators',
+    networkRedundancy: 'Diverse fiber entry, redundant core switches, subsea cable access',
     status: 'planned',
   },
 ];

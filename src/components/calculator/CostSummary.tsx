@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { MapPin } from 'lucide-react';
 
 interface Props {
   dictionary: {
@@ -20,6 +21,7 @@ interface Props {
   totalMonthly: number;
   hasSelections: boolean;
   locale: string;
+  locationLabel: string;
   categoryLabels: {
     colocation: string;
     server: string;
@@ -31,12 +33,18 @@ function formatCAD(amount: number): string {
   return amount.toLocaleString('en-CA', { style: 'currency', currency: 'CAD', minimumFractionDigits: 0, maximumFractionDigits: 0 });
 }
 
-export default function CostSummary({ dictionary, coloCost, serverCost, managedCost, totalMonthly, hasSelections, locale, categoryLabels }: Props) {
+export default function CostSummary({ dictionary, coloCost, serverCost, managedCost, totalMonthly, hasSelections, locale, locationLabel, categoryLabels }: Props) {
   if (!hasSelections) return null;
 
   return (
     <div className="bg-forest-dark rounded-2xl p-6 md:p-8 text-white">
-      <h3 className="text-lg font-bold mb-6">{dictionary.title}</h3>
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-lg font-bold">{dictionary.title}</h3>
+        <span className="flex items-center gap-1.5 text-sm text-white/70">
+          <MapPin className="w-4 h-4" />
+          {locationLabel}
+        </span>
+      </div>
 
       {totalMonthly > 0 ? (
         <>

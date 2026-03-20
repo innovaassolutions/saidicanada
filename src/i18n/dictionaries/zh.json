@@ -14,7 +14,7 @@
     },
     "locations": {
       "title": "设施位置 | SAIDI Canada",
-      "description": "SAIDI Canada 在加拿大各地的数据中心位置——多伦多、蒙特利尔、卡尔加里和温哥华。"
+      "description": "SAIDI Canada 在加拿大各地的数据中心位置——多伦多、蒙特利尔、埃德蒙顿和温哥华。"
     },
     "sustainability": {
       "title": "可持续发展 | SAIDI Canada",
@@ -245,6 +245,10 @@
     "label": "成本估算",
     "title": "服务成本计算器",
     "description": "获取您数据中心需求的透明估算。选择下方的服务，实时查看加元定价。",
+    "location": {
+      "title": "位置",
+      "description": "选择数据中心位置。电力和带宽成本因地区而异。"
+    },
     "steps": {
       "serviceType": "服务类型",
       "colocation": "托管",

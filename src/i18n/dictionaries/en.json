@@ -14,7 +14,7 @@
     },
     "locations": {
       "title": "Locations | SAIDI Canada",
-      "description": "SAIDI Canada data centre locations across Canada — Toronto, Montreal, Calgary, and Vancouver."
+      "description": "SAIDI Canada data centre locations across Canada — Toronto, Montreal, Edmonton, and Vancouver."
     },
     "sustainability": {
       "title": "Sustainability | SAIDI Canada",
@@ -245,6 +245,10 @@
     "label": "Cost Estimator",
     "title": "Services Cost Calculator",
     "description": "Get a transparent estimate for your data centre needs. Select your services below and see real-time pricing in Canadian dollars.",
+    "location": {
+      "title": "Location",
+      "description": "Select a data centre location. Power and bandwidth costs vary by region."
+    },
     "steps": {
       "serviceType": "Service Type",
       "colocation": "Colocation",

@@ -141,3 +141,10 @@ export const addons = {
   managedBackup: { id: 'addon-backup', name: 'Managed Backup', priceCAD: 0.08, unit: 'per-gb-month' as const },
   ddosProtection: { id: 'addon-ddos', name: 'DDoS Protection', priceCAD: 200, unit: 'per-month' as const },
 };
+
+export const regionalMultipliers: Record<string, { power: number; bandwidth: number; label: string }> = {
+  toronto: { power: 1.0, bandwidth: 1.0, label: 'Toronto, ON' },
+  montreal: { power: 0.75, bandwidth: 0.95, label: 'Montréal, QC' },
+  edmonton: { power: 0.85, bandwidth: 1.10, label: 'Edmonton, AB' },
+  vancouver: { power: 0.90, bandwidth: 1.05, label: 'Vancouver, BC' },
+};

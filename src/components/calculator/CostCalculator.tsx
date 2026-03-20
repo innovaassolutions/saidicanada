@@ -14,6 +14,7 @@ import {
   gpuPricing,
   managedServicesTiers,
   addons,
+  regionalMultipliers,
 } from '@/data/pricing';
 
 interface CostCalculatorProps {
@@ -25,6 +26,10 @@ interface CostCalculatorProps {
         dedicatedServer: string;
         gpuCompute: string;
         managedServices: string;
+      };
+      location: {
+        title: string;
+        description: string;
       };
       colocation: {
         title: string;
@@ -86,7 +91,10 @@ export interface ManagedSelection {
   remoteHandsHours: number;
 }
 
+const locationKeys = Object.keys(regionalMultipliers);
+
 export default function CostCalculator({ dictionary, locale }: CostCalculatorProps) {
+  const [selectedLocation, setSelectedLocation] = useState('toronto');
   const [activeServices, setActiveServices] = useState<Set<string>>(new Set());
   const [coloSelection, setColoSelection] = useState<ColoSelection>({
     spaceId: 'colo-full',
@@ -113,6 +121,8 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
     });
   };
 
+  const multiplier = regionalMultipliers[selectedLocation];
+
   // Calculate costs
   const coloCost = activeServices.has('colocation')
     ? (() => {
@@ -120,8 +130,8 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
         const bw = bandwidthPricing.find((p) => p.id === coloSelection.bandwidthId);
         return (
           (space?.monthlyCAD ?? 0) * coloSelection.quantity +
-          (bw?.monthlyCAD ?? 0) +
-          coloSelection.additionalPowerKW * additionalPowerPricePerKW +
+          (bw?.monthlyCAD ?? 0) * multiplier.bandwidth +
+          coloSelection.additionalPowerKW * additionalPowerPricePerKW * multiplier.power +
           coloSelection.crossConnects * crossConnectPrice
         );
       })()
@@ -158,7 +168,28 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
 
   return (
     <div className="space-y-8">
-      {/* Step 1: Service Type Selection */}
+      {/* Location Selector */}
+      <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-sage/10">
+        <h3 className="text-lg font-bold text-forest-dark mb-1">{d.location.title}</h3>
+        <p className="text-sm text-warm-gray mb-4">{d.location.description}</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {locationKeys.map((key) => (
+            <button
+              key={key}
+              onClick={() => setSelectedLocation(key)}
+              className={`p-4 rounded-xl text-sm font-medium border-2 transition-all ${
+                selectedLocation === key
+                  ? 'border-forest bg-forest text-white'
+                  : 'border-sage/20 bg-light-gray text-warm-gray hover:border-forest/50'
+              }`}
+            >
+              {regionalMultipliers[key].label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Service Type Selection */}
       <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-sage/10">
         <h3 className="text-lg font-bold text-forest-dark mb-4">{d.steps.serviceType}</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -178,7 +209,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
         </div>
       </div>
 
-      {/* Step 2: Colocation */}
+      {/* Colocation */}
       {activeServices.has('colocation') && (
         <ColocationConfigurator
           dictionary={d.colocation}
@@ -187,7 +218,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
         />
       )}
 
-      {/* Step 3: Servers/GPU */}
+      {/* Servers/GPU */}
       {(activeServices.has('server') || activeServices.has('gpu')) && (
         <ServerConfigurator
           dictionary={d.server}
@@ -198,7 +229,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
         />
       )}
 
-      {/* Step 4: Managed Services */}
+      {/* Managed Services */}
       {activeServices.has('managed') && (
         <ManagedServicesConfigurator
           dictionary={d.managed}
@@ -207,7 +238,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
         />
       )}
 
-      {/* Step 5: Cost Summary */}
+      {/* Cost Summary */}
       <CostSummary
         dictionary={d.summary}
         coloCost={coloCost}
@@ -216,6 +247,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
         totalMonthly={totalMonthly}
         hasSelections={activeServices.size > 0}
         locale={locale}
+        locationLabel={multiplier.label}
         categoryLabels={{
           colocation: d.summary.categoryColocation,
           server: d.summary.categoryServer,

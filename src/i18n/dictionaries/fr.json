@@ -14,7 +14,7 @@
     },
     "locations": {
       "title": "Emplacements | SAIDI Canada",
-      "description": "Emplacements des centres de données SAIDI Canada à travers le pays — Toronto, Montréal, Calgary et Vancouver."
+      "description": "Emplacements des centres de données SAIDI Canada à travers le pays — Toronto, Montréal, Edmonton et Vancouver."
     },
     "sustainability": {
       "title": "Développement durable | SAIDI Canada",
@@ -245,6 +245,10 @@
     "label": "Estimateur de coûts",
     "title": "Calculateur de coûts des services",
     "description": "Obtenez une estimation transparente pour vos besoins en centres de données. Sélectionnez vos services ci-dessous et consultez les prix en temps réel en dollars canadiens.",
+    "location": {
+      "title": "Emplacement",
+      "description": "Sélectionnez un emplacement de centre de données. Les coûts d'énergie et de bande passante varient selon la région."
+    },
     "steps": {
       "serviceType": "Type de service",
       "colocation": "Colocation",

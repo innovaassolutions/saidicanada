@@ -1,4 +1,6 @@
+import { Globe, Zap, Shield } from 'lucide-react';
 import type { Facility } from '@/data/facilities';
+import FacilityImageGallery from './FacilityImageGallery';
 
 interface FacilityCardProps {
   facility: Facility;
@@ -24,6 +26,9 @@ const statusKeys = {
 export default function FacilityCard({ facility, statusLabels }: FacilityCardProps) {
   return (
     <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage/10 hover:shadow-md transition-shadow">
+      {facility.images && facility.images.length > 0 && (
+        <FacilityImageGallery images={facility.images} name={facility.name} />
+      )}
       <div className="flex items-start justify-between mb-4">
         <div>
           <h3 className="text-lg font-bold text-forest-dark">{facility.name}</h3>
@@ -55,6 +60,39 @@ export default function FacilityCard({ facility, statusLabels }: FacilityCardPro
         <span className="text-warm-gray/70 text-sm">Cooling</span>
         <p className="text-sm font-medium text-forest-dark">{facility.cooling}</p>
       </div>
+      {/* Power & Network Redundancy */}
+      <div className="mt-3 pt-3 border-t border-sage/10 space-y-2">
+        <div className="flex items-start gap-2">
+          <Zap className="w-4 h-4 text-forest mt-0.5 flex-shrink-0" />
+          <div>
+            <span className="text-warm-gray/70 text-xs">Power Redundancy</span>
+            <p className="text-sm font-medium text-forest-dark">{facility.powerRedundancy}</p>
+          </div>
+        </div>
+        <div className="flex items-start gap-2">
+          <Shield className="w-4 h-4 text-forest mt-0.5 flex-shrink-0" />
+          <div>
+            <span className="text-warm-gray/70 text-xs">Network Redundancy</span>
+            <p className="text-sm font-medium text-forest-dark">{facility.networkRedundancy}</p>
+          </div>
+        </div>
+      </div>
+      {/* Connectivity */}
+      {facility.connectivity.length > 0 && (
+        <div className="mt-3 pt-3 border-t border-sage/10">
+          <div className="flex items-center gap-1.5 mb-1.5">
+            <Globe className="w-3.5 h-3.5 text-forest" />
+            <span className="text-warm-gray/70 text-xs">Connectivity</span>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {facility.connectivity.map((isp) => (
+              <span key={isp} className="bg-forest-dark/5 text-forest-dark text-xs px-2 py-0.5 rounded-full">
+                {isp}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
       {facility.certifications.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-1.5">
           {facility.certifications.map((cert) => (
