@@ -3,6 +3,11 @@
 import { managedServicesTiers, addons } from '@/data/pricing';
 import type { ManagedSelection } from './CostCalculator';
 
+interface PricingDataItem {
+  name: string;
+  includes?: string;
+}
+
 interface Props {
   dictionary: {
     title: string;
@@ -13,38 +18,42 @@ interface Props {
     ddosProtection: string;
     serverCount: string;
   };
+  pricingData: Record<string, PricingDataItem>;
   selection: ManagedSelection;
   onUpdate: (selection: ManagedSelection) => void;
 }
 
-export default function ManagedServicesConfigurator({ dictionary, selection, onUpdate }: Props) {
+export default function ManagedServicesConfigurator({ dictionary, pricingData, selection, onUpdate }: Props) {
   return (
     <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-sage/10">
       <h3 className="text-lg font-bold text-forest-dark mb-6">{dictionary.title}</h3>
       <div className="space-y-6">
         {/* Tier Selection */}
         <div className="space-y-2">
-          {managedServicesTiers.map((tier) => (
-            <button
-              key={tier.id}
-              onClick={() => onUpdate({ ...selection, tierId: tier.id })}
-              className={`w-full text-left p-4 rounded-xl border-2 transition-all ${
-                selection.tierId === tier.id
-                  ? 'border-forest bg-mint'
-                  : 'border-sage/20 hover:border-forest/50'
-              }`}
-            >
-              <div className="flex justify-between items-start">
-                <div>
-                  <div className="font-medium text-forest-dark">{tier.name}</div>
-                  <div className="text-xs text-warm-gray/70 mt-0.5">{tier.includes}</div>
+          {managedServicesTiers.map((tier) => {
+            const t = pricingData[tier.id];
+            return (
+              <button
+                key={tier.id}
+                onClick={() => onUpdate({ ...selection, tierId: tier.id })}
+                className={`w-full text-left p-4 rounded-xl border-2 transition-all ${
+                  selection.tierId === tier.id
+                    ? 'border-forest bg-mint'
+                    : 'border-sage/20 hover:border-forest/50'
+                }`}
+              >
+                <div className="flex justify-between items-start">
+                  <div>
+                    <div className="font-medium text-forest-dark">{t?.name ?? tier.name}</div>
+                    <div className="text-xs text-warm-gray/70 mt-0.5">{t?.includes ?? tier.includes}</div>
+                  </div>
+                  <span className="text-sm font-bold text-forest whitespace-nowrap">
+                    ${tier.monthlyCADPerServer}{dictionary.perServerMonth}
+                  </span>
                 </div>
-                <span className="text-sm font-bold text-forest whitespace-nowrap">
-                  ${tier.monthlyCADPerServer}{dictionary.perServerMonth}
-                </span>
-              </div>
-            </button>
-          ))}
+              </button>
+            );
+          })}
         </div>
 
         {/* Server Count */}

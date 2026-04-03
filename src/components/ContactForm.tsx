@@ -1,7 +1,7 @@
 "use client";
 
 interface ContactFormProps {
-  dictionary?: {
+  dictionary: {
     firstName: string;
     lastName: string;
     email: string;
@@ -12,14 +12,7 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ dictionary }: ContactFormProps) {
-  const d = dictionary ?? {
-    firstName: "First name",
-    lastName: "Last name",
-    email: "Email address",
-    company: "Company",
-    message: "Tell us about your infrastructure needs...",
-    submit: "Send Message",
-  };
+  const d = dictionary;
 
   return (
     <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>

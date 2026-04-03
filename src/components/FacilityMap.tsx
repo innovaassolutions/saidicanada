@@ -12,6 +12,13 @@ interface FacilityMapProps {
     underConstruction: string;
     planned: string;
   };
+  facilityLabels: {
+    tier: string;
+    pue: string;
+    power: string;
+    status: string;
+  };
+  provinceLabels: Record<string, string>;
 }
 
 const statusKeys = {
@@ -35,7 +42,7 @@ const markerIcons = {
   planned: createMarkerIcon('#87a96b'),
 };
 
-export default function FacilityMap({ facilities, statusLabels }: FacilityMapProps) {
+export default function FacilityMap({ facilities, statusLabels, facilityLabels, provinceLabels }: FacilityMapProps) {
   return (
     <MapContainer
       center={[56.13, -106.35]}
@@ -56,15 +63,15 @@ export default function FacilityMap({ facilities, statusLabels }: FacilityMapPro
           <Popup>
             <div className="p-1 min-w-[200px]">
               <h3 className="font-bold text-forest-dark text-sm">{facility.name}</h3>
-              <p className="text-xs text-warm-gray mb-2">{facility.city}, {facility.province}</p>
+              <p className="text-xs text-warm-gray mb-2">{facility.city}, {provinceLabels[facility.province] ?? facility.province}</p>
               <div className="grid grid-cols-2 gap-1 text-xs">
-                <span className="text-warm-gray/70">Status:</span>
+                <span className="text-warm-gray/70">{facilityLabels.status}:</span>
                 <span className="font-medium">{statusLabels[statusKeys[facility.status] as keyof typeof statusLabels]}</span>
-                <span className="text-warm-gray/70">Tier:</span>
+                <span className="text-warm-gray/70">{facilityLabels.tier}:</span>
                 <span className="font-medium">{facility.tier}</span>
-                <span className="text-warm-gray/70">Power:</span>
+                <span className="text-warm-gray/70">{facilityLabels.power}:</span>
                 <span className="font-medium">{facility.totalPowerMW} MW</span>
-                <span className="text-warm-gray/70">PUE:</span>
+                <span className="text-warm-gray/70">{facilityLabels.pue}:</span>
                 <span className="font-medium">{facility.pue}</span>
               </div>
             </div>

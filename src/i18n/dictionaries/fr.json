@@ -38,6 +38,11 @@
     "contact": "Contact",
     "getStarted": "Commencer"
   },
+  "mobileMenu": {
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "title": "Menu"
+  },
   "hero": {
     "badge": "Infrastructure à faible émission de carbone pour le Canada",
     "title": "Alimenter l'avenir,",
@@ -239,6 +244,45 @@
       "operational": "Opérationnel",
       "underConstruction": "En construction",
       "planned": "Planifié"
+    },
+    "facilityLabels": {
+      "tier": "Niveau",
+      "pue": "PUE",
+      "power": "Puissance",
+      "racks": "Racks",
+      "cooling": "Refroidissement",
+      "powerRedundancy": "Redondance électrique",
+      "networkRedundancy": "Redondance réseau",
+      "connectivity": "Connectivité",
+      "status": "Statut"
+    },
+    "facilityData": {
+      "yyz-1": {
+        "cooling": "Air libre + évaporatif hybride",
+        "powerRedundancy": "ASI 2N, double alimentation réseau, génératrices diesel",
+        "networkRedundancy": "Entrée fibre diversifiée, commutateurs de cœur redondants, double WAN"
+      },
+      "yul-1": {
+        "cooling": "Air libre + refroidissement par eau de rivière",
+        "powerRedundancy": "ASI 2N, double alimentation Hydro-Québec, génératrices diesel",
+        "networkRedundancy": "Entrée fibre diversifiée, commutateurs de cœur redondants"
+      },
+      "yeg-1": {
+        "cooling": "Air libre dominant (10+ mois/an)",
+        "powerRedundancy": "ASI 2N, double alimentation réseau, génératrices GNL, réserve de 48 h",
+        "networkRedundancy": "Entrée fibre diversifiée, commutateurs de cœur redondants, anneau fibre noire"
+      },
+      "yvr-1": {
+        "cooling": "Air libre + refroidissement par eau de mer",
+        "powerRedundancy": "ASI 2N, double alimentation BC Hydro, génératrices diesel",
+        "networkRedundancy": "Entrée fibre diversifiée, commutateurs de cœur redondants, accès câble sous-marin"
+      }
+    },
+    "provinces": {
+      "Ontario": "Ontario",
+      "Québec": "Québec",
+      "Alberta": "Alberta",
+      "British Columbia": "Colombie-Britannique"
     }
   },
   "calculator": {
@@ -290,6 +334,41 @@
       "categoryColocation": "Colocation",
       "categoryServer": "Serveurs et GPU",
       "categoryManaged": "Services gérés"
+    },
+    "regions": {
+      "toronto": "Toronto, ON",
+      "montreal": "Montréal, QC",
+      "edmonton": "Edmonton, AB",
+      "vancouver": "Vancouver, C.-B."
+    },
+    "pricingData": {
+      "colo-1u": { "name": "Espace rack 1U", "specs": "1U, 0,5 kW inclus" },
+      "colo-2u": { "name": "Espace rack 2U", "specs": "2U, 0,8 kW inclus" },
+      "colo-4u": { "name": "Espace rack 4U", "specs": "4U, 1,2 kW inclus" },
+      "colo-quarter": { "name": "Quart de rack", "specs": "10U, 2,5 kW inclus" },
+      "colo-half": { "name": "Demi-rack", "specs": "20U, 5 kW inclus" },
+      "colo-full": { "name": "Rack complet", "specs": "42U, 10 kW inclus" },
+      "bw-100": { "name": "100 Mbps garanti" },
+      "bw-1g": { "name": "1 Gbps garanti" },
+      "bw-10g": { "name": "10 Gbps garanti" },
+      "srv-entry": { "name": "Serveur 1U entrée de gamme", "specs": "Dual Xeon Silver, 64 Go RAM, 2x1 To SSD" },
+      "srv-mid": { "name": "Serveur 1U milieu de gamme", "specs": "Dual Xeon Gold, 128 Go RAM, 2x1,92 To NVMe" },
+      "srv-highmem": { "name": "Serveur 2U haute mémoire", "specs": "Dual EPYC, 512 Go RAM, 4x NVMe" },
+      "gpu-4090": { "name": "1x RTX 4090", "specs": "Serveur GPU, 2U" },
+      "gpu-l40s-1": { "name": "1x L40S 48 Go", "specs": "Serveur GPU, 2U" },
+      "gpu-l40s-4": { "name": "4x L40S 48 Go", "specs": "Serveur GPU, 4U" },
+      "gpu-a100-1": { "name": "1x A100 80 Go", "specs": "Serveur GPU, PCIe" },
+      "gpu-a100-4": { "name": "4x A100 80 Go SXM", "specs": "Serveur GPU, 4U" },
+      "gpu-h100-1": { "name": "1x H100 80 Go", "specs": "Serveur GPU, PCIe" },
+      "gpu-h100-8": { "name": "8x H100 SXM", "specs": "Classe DGX, 8U" },
+      "gpu-mi300x": { "name": "1x AMD MI300X", "specs": "Serveur GPU, 192 Go HBM3" },
+      "mgd-monitor": { "name": "Surveillance uniquement", "includes": "Surveillance disponibilité/ping, alertes" },
+      "mgd-standard": { "name": "Gestion standard", "includes": "Correctifs OS, surveillance, pare-feu, tickets" },
+      "mgd-advanced": { "name": "Gestion avancée", "includes": "Sauvegarde, sécurité, NOC 24/7, SLA 4 h" },
+      "mgd-full": { "name": "Gestion complète", "includes": "TAM dédié, conformité, DR, SLA 2 h" },
+      "addon-rh": { "name": "Mains à distance" },
+      "addon-backup": { "name": "Sauvegarde gérée" },
+      "addon-ddos": { "name": "Protection DDoS" }
     }
   }
 }

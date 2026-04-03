@@ -17,6 +17,12 @@ import {
   regionalMultipliers,
 } from '@/data/pricing';
 
+interface PricingDataItem {
+  name: string;
+  specs?: string;
+  includes?: string;
+}
+
 interface CostCalculatorProps {
   dictionary: {
     calculator: {
@@ -66,6 +72,8 @@ interface CostCalculatorProps {
         categoryServer: string;
         categoryManaged: string;
       };
+      regions: Record<string, string>;
+      pricingData: Record<string, PricingDataItem>;
     };
   };
   locale: string;
@@ -158,6 +166,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
   const totalMonthly = coloCost + serverCost + managedCost;
 
   const d = dictionary.calculator;
+  const pricingData = d.pricingData;
 
   const serviceTypes = [
     { id: 'colocation', label: d.steps.colocation },
@@ -183,7 +192,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
                   : 'border-sage/20 bg-light-gray text-warm-gray hover:border-forest/50'
               }`}
             >
-              {regionalMultipliers[key].label}
+              {d.regions[key] ?? regionalMultipliers[key].label}
             </button>
           ))}
         </div>
@@ -213,6 +222,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
       {activeServices.has('colocation') && (
         <ColocationConfigurator
           dictionary={d.colocation}
+          pricingData={pricingData}
           selection={coloSelection}
           onUpdate={setColoSelection}
         />
@@ -222,6 +232,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
       {(activeServices.has('server') || activeServices.has('gpu')) && (
         <ServerConfigurator
           dictionary={d.server}
+          pricingData={pricingData}
           showServers={activeServices.has('server')}
           showGPU={activeServices.has('gpu')}
           selections={serverSelections}
@@ -233,6 +244,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
       {activeServices.has('managed') && (
         <ManagedServicesConfigurator
           dictionary={d.managed}
+          pricingData={pricingData}
           selection={managedSelection}
           onUpdate={setManagedSelection}
         />
@@ -247,7 +259,7 @@ export default function CostCalculator({ dictionary, locale }: CostCalculatorPro
         totalMonthly={totalMonthly}
         hasSelections={activeServices.size > 0}
         locale={locale}
-        locationLabel={multiplier.label}
+        locationLabel={d.regions[selectedLocation] ?? multiplier.label}
         categoryLabels={{
           colocation: d.summary.categoryColocation,
           server: d.summary.categoryServer,

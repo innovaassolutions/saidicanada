@@ -38,6 +38,11 @@
     "contact": "Contact",
     "getStarted": "Get Started"
   },
+  "mobileMenu": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "title": "Menu"
+  },
   "hero": {
     "badge": "Lower-Carbon Infrastructure for Canada",
     "title": "Powering the Future,",
@@ -239,6 +244,45 @@
       "operational": "Operational",
       "underConstruction": "Under Construction",
       "planned": "Planned"
+    },
+    "facilityLabels": {
+      "tier": "Tier",
+      "pue": "PUE",
+      "power": "Power",
+      "racks": "Racks",
+      "cooling": "Cooling",
+      "powerRedundancy": "Power Redundancy",
+      "networkRedundancy": "Network Redundancy",
+      "connectivity": "Connectivity",
+      "status": "Status"
+    },
+    "facilityData": {
+      "yyz-1": {
+        "cooling": "Free-air + evaporative hybrid",
+        "powerRedundancy": "2N UPS, Dual utility feeds, Diesel generators",
+        "networkRedundancy": "Diverse fiber entry, redundant core switches, dual WAN"
+      },
+      "yul-1": {
+        "cooling": "Free-air + river water cooling",
+        "powerRedundancy": "2N UPS, Dual Hydro-Québec feeds, Diesel generators",
+        "networkRedundancy": "Diverse fiber entry, redundant core switches"
+      },
+      "yeg-1": {
+        "cooling": "Free-air dominant (10+ months/year)",
+        "powerRedundancy": "2N UPS, Dual utility feeds, LNG generators, 48hr fuel reserve",
+        "networkRedundancy": "Diverse fiber entry, redundant core switches, dark fiber ring"
+      },
+      "yvr-1": {
+        "cooling": "Free-air + seawater cooling",
+        "powerRedundancy": "2N UPS, Dual BC Hydro feeds, Diesel generators",
+        "networkRedundancy": "Diverse fiber entry, redundant core switches, subsea cable access"
+      }
+    },
+    "provinces": {
+      "Ontario": "Ontario",
+      "Québec": "Québec",
+      "Alberta": "Alberta",
+      "British Columbia": "British Columbia"
     }
   },
   "calculator": {
@@ -290,6 +334,41 @@
       "categoryColocation": "Colocation",
       "categoryServer": "Servers & GPU",
       "categoryManaged": "Managed Services"
+    },
+    "regions": {
+      "toronto": "Toronto, ON",
+      "montreal": "Montréal, QC",
+      "edmonton": "Edmonton, AB",
+      "vancouver": "Vancouver, BC"
+    },
+    "pricingData": {
+      "colo-1u": { "name": "1U Rack Space", "specs": "1U, 0.5kW included" },
+      "colo-2u": { "name": "2U Rack Space", "specs": "2U, 0.8kW included" },
+      "colo-4u": { "name": "4U Rack Space", "specs": "4U, 1.2kW included" },
+      "colo-quarter": { "name": "Quarter Rack", "specs": "10U, 2.5kW included" },
+      "colo-half": { "name": "Half Rack", "specs": "20U, 5kW included" },
+      "colo-full": { "name": "Full Rack", "specs": "42U, 10kW included" },
+      "bw-100": { "name": "100 Mbps Committed" },
+      "bw-1g": { "name": "1 Gbps Committed" },
+      "bw-10g": { "name": "10 Gbps Committed" },
+      "srv-entry": { "name": "Entry 1U Server", "specs": "Dual Xeon Silver, 64 GB RAM, 2x1 TB SSD" },
+      "srv-mid": { "name": "Mid-Range 1U Server", "specs": "Dual Xeon Gold, 128 GB RAM, 2x1.92 TB NVMe" },
+      "srv-highmem": { "name": "High-Memory 2U Server", "specs": "Dual EPYC, 512 GB RAM, 4x NVMe" },
+      "gpu-4090": { "name": "1x RTX 4090", "specs": "GPU Server, 2U" },
+      "gpu-l40s-1": { "name": "1x L40S 48 GB", "specs": "GPU Server, 2U" },
+      "gpu-l40s-4": { "name": "4x L40S 48 GB", "specs": "GPU Server, 4U" },
+      "gpu-a100-1": { "name": "1x A100 80 GB", "specs": "GPU Server, PCIe" },
+      "gpu-a100-4": { "name": "4x A100 80 GB SXM", "specs": "GPU Server, 4U" },
+      "gpu-h100-1": { "name": "1x H100 80 GB", "specs": "GPU Server, PCIe" },
+      "gpu-h100-8": { "name": "8x H100 SXM", "specs": "DGX-class, 8U" },
+      "gpu-mi300x": { "name": "1x AMD MI300X", "specs": "GPU Server, 192 GB HBM3" },
+      "mgd-monitor": { "name": "Monitoring Only", "includes": "Uptime/ping monitoring, alerts" },
+      "mgd-standard": { "name": "Standard Managed", "includes": "OS patching, monitoring, firewall, tickets" },
+      "mgd-advanced": { "name": "Advanced Managed", "includes": "Backup, security, 24/7 NOC, 4hr SLA" },
+      "mgd-full": { "name": "Fully Managed", "includes": "Dedicated TAM, compliance, DR, 2hr SLA" },
+      "addon-rh": { "name": "Remote Hands" },
+      "addon-backup": { "name": "Managed Backup" },
+      "addon-ddos": { "name": "DDoS Protection" }
     }
   }
 }

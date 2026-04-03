@@ -23,6 +23,9 @@ export default async function LocationsPage({ params }: { params: Promise<{ loca
   const provinces = new Set(facilities.map((f) => f.province)).size;
 
   const statusLabels = dict.locations.status;
+  const facilityLabels = dict.locations.facilityLabels;
+  const facilityDataMap = dict.locations.facilityData as Record<string, { cooling: string; powerRedundancy: string; networkRedundancy: string }>;
+  const provinceLabels = dict.locations.provinces as Record<string, string>;
 
   return (
     <>
@@ -61,7 +64,12 @@ export default async function LocationsPage({ params }: { params: Promise<{ loca
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
-            <FacilityMapWrapper facilities={facilities} statusLabels={statusLabels} />
+            <FacilityMapWrapper
+              facilities={facilities}
+              statusLabels={statusLabels}
+              facilityLabels={facilityLabels}
+              provinceLabels={provinceLabels}
+            />
           </ScrollReveal>
         </div>
       </section>
@@ -72,7 +80,13 @@ export default async function LocationsPage({ params }: { params: Promise<{ loca
           <div className="grid md:grid-cols-2 gap-6">
             {facilities.map((facility, i) => (
               <ScrollReveal key={facility.id} delay={i * 100}>
-                <FacilityCard facility={facility} statusLabels={statusLabels} />
+                <FacilityCard
+                  facility={facility}
+                  statusLabels={statusLabels}
+                  facilityLabels={facilityLabels}
+                  facilityData={facilityDataMap[facility.id]}
+                  provinceLabel={provinceLabels[facility.province]}
+                />
               </ScrollReveal>
             ))}
           </div>

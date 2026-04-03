@@ -38,6 +38,11 @@
     "contact": "联系",
     "getStarted": "立即开始"
   },
+  "mobileMenu": {
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "title": "菜单"
+  },
   "hero": {
     "badge": "加拿大低碳基础设施",
     "title": "驱动未来，",
@@ -239,6 +244,45 @@
       "operational": "运营中",
       "underConstruction": "建设中",
       "planned": "规划中"
+    },
+    "facilityLabels": {
+      "tier": "等级",
+      "pue": "PUE",
+      "power": "电力",
+      "racks": "机架",
+      "cooling": "冷却",
+      "powerRedundancy": "电力冗余",
+      "networkRedundancy": "网络冗余",
+      "connectivity": "网络连接",
+      "status": "状态"
+    },
+    "facilityData": {
+      "yyz-1": {
+        "cooling": "自然空气 + 蒸发式混合冷却",
+        "powerRedundancy": "2N UPS，双路市电供电，柴油发电机",
+        "networkRedundancy": "多路光纤入口，冗余核心交换机，双 WAN"
+      },
+      "yul-1": {
+        "cooling": "自然空气 + 河水冷却",
+        "powerRedundancy": "2N UPS，双路 Hydro-Québec 供电，柴油发电机",
+        "networkRedundancy": "多路光纤入口，冗余核心交换机"
+      },
+      "yeg-1": {
+        "cooling": "自然空气冷却为主（全年 10 个月以上）",
+        "powerRedundancy": "2N UPS，双路市电供电，LNG 发电机，48 小时燃料储备",
+        "networkRedundancy": "多路光纤入口，冗余核心交换机，暗光纤环网"
+      },
+      "yvr-1": {
+        "cooling": "自然空气 + 海水冷却",
+        "powerRedundancy": "2N UPS，双路 BC Hydro 供电，柴油发电机",
+        "networkRedundancy": "多路光纤入口，冗余核心交换机，海底电缆接入"
+      }
+    },
+    "provinces": {
+      "Ontario": "安大略省",
+      "Québec": "魁北克省",
+      "Alberta": "阿尔伯塔省",
+      "British Columbia": "不列颠哥伦比亚省"
     }
   },
   "calculator": {
@@ -290,6 +334,41 @@
       "categoryColocation": "托管",
       "categoryServer": "服务器和 GPU",
       "categoryManaged": "托管服务"
+    },
+    "regions": {
+      "toronto": "多伦多，安大略省",
+      "montreal": "蒙特利尔，魁北克省",
+      "edmonton": "埃德蒙顿，阿尔伯塔省",
+      "vancouver": "温哥华，不列颠哥伦比亚省"
+    },
+    "pricingData": {
+      "colo-1u": { "name": "1U 机架空间", "specs": "1U，含 0.5kW" },
+      "colo-2u": { "name": "2U 机架空间", "specs": "2U，含 0.8kW" },
+      "colo-4u": { "name": "4U 机架空间", "specs": "4U，含 1.2kW" },
+      "colo-quarter": { "name": "四分之一机架", "specs": "10U，含 2.5kW" },
+      "colo-half": { "name": "半机架", "specs": "20U，含 5kW" },
+      "colo-full": { "name": "整机架", "specs": "42U，含 10kW" },
+      "bw-100": { "name": "100 Mbps 承诺带宽" },
+      "bw-1g": { "name": "1 Gbps 承诺带宽" },
+      "bw-10g": { "name": "10 Gbps 承诺带宽" },
+      "srv-entry": { "name": "入门级 1U 服务器", "specs": "双路 Xeon Silver，64 GB 内存，2x1 TB SSD" },
+      "srv-mid": { "name": "中端 1U 服务器", "specs": "双路 Xeon Gold，128 GB 内存，2x1.92 TB NVMe" },
+      "srv-highmem": { "name": "大内存 2U 服务器", "specs": "双路 EPYC，512 GB 内存，4x NVMe" },
+      "gpu-4090": { "name": "1x RTX 4090", "specs": "GPU 服务器，2U" },
+      "gpu-l40s-1": { "name": "1x L40S 48 GB", "specs": "GPU 服务器，2U" },
+      "gpu-l40s-4": { "name": "4x L40S 48 GB", "specs": "GPU 服务器，4U" },
+      "gpu-a100-1": { "name": "1x A100 80 GB", "specs": "GPU 服务器，PCIe" },
+      "gpu-a100-4": { "name": "4x A100 80 GB SXM", "specs": "GPU 服务器，4U" },
+      "gpu-h100-1": { "name": "1x H100 80 GB", "specs": "GPU 服务器，PCIe" },
+      "gpu-h100-8": { "name": "8x H100 SXM", "specs": "DGX 级，8U" },
+      "gpu-mi300x": { "name": "1x AMD MI300X", "specs": "GPU 服务器，192 GB HBM3" },
+      "mgd-monitor": { "name": "仅监控", "includes": "运行时间/ping 监控，告警" },
+      "mgd-standard": { "name": "标准托管", "includes": "OS 补丁，监控，防火墙，工单" },
+      "mgd-advanced": { "name": "高级托管", "includes": "备份，安全，24/7 NOC，4 小时 SLA" },
+      "mgd-full": { "name": "全面托管", "includes": "专属 TAM，合规，灾备，2 小时 SLA" },
+      "addon-rh": { "name": "远程操作" },
+      "addon-backup": { "name": "托管备份" },
+      "addon-ddos": { "name": "DDoS 防护" }
     }
   }
 }

@@ -18,6 +18,11 @@ interface MobileMenuProps {
       contact: string;
       getStarted: string;
     };
+    mobileMenu: {
+      openMenu: string;
+      closeMenu: string;
+      title: string;
+    };
   };
   navLinks: readonly { key: string; href: string }[];
 }
@@ -41,7 +46,7 @@ export default function MobileMenu({ locale, dictionary, navLinks }: MobileMenuP
       <button
         onClick={() => setIsOpen(true)}
         className="p-2 text-warm-gray hover:text-forest transition-colors"
-        aria-label="Open menu"
+        aria-label={dictionary.mobileMenu.openMenu}
       >
         <Menu size={24} />
       </button>
@@ -61,11 +66,11 @@ export default function MobileMenu({ locale, dictionary, navLinks }: MobileMenuP
         }`}
       >
         <div className="flex items-center justify-between p-6 border-b border-sage/20">
-          <span className="text-lg font-bold text-forest">Menu</span>
+          <span className="text-lg font-bold text-forest">{dictionary.mobileMenu.title}</span>
           <button
             onClick={() => setIsOpen(false)}
             className="p-2 text-warm-gray hover:text-forest transition-colors"
-            aria-label="Close menu"
+            aria-label={dictionary.mobileMenu.closeMenu}
           >
             <X size={24} />
           </button>

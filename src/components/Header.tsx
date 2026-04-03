@@ -16,6 +16,11 @@ interface HeaderProps {
       contact: string;
       getStarted: string;
     };
+    mobileMenu: {
+      openMenu: string;
+      closeMenu: string;
+      title: string;
+    };
   };
 }
 
