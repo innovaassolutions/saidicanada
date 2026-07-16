@@ -234,7 +234,7 @@
   "locations": {
     "label": "Nos installations",
     "title": "Emplacements des centres de données",
-    "description": "SAIDI Canada exploite et planifie des installations dans les principaux pôles technologiques du Canada, tirant parti des avantages uniques de chaque région pour une performance et une durabilité optimales.",
+    "description": "SAIDI Canada exploite des installations dans les principaux pôles technologiques du Canada, tirant parti des avantages uniques de chaque région pour une performance et une durabilité optimales.",
     "statsBar": {
       "facilities": "Installations",
       "totalCapacity": "Capacité totale",

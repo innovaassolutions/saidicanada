@@ -234,7 +234,7 @@
   "locations": {
     "label": "我们的设施",
     "title": "数据中心位置",
-    "description": "SAIDI Canada 在加拿大主要科技中心运营和规划设施，利用每个地区的独特优势实现最佳性能和可持续发展。",
+    "description": "SAIDI Canada 在加拿大主要科技中心运营设施，利用每个地区的独特优势实现最佳性能和可持续发展。",
     "statsBar": {
       "facilities": "设施",
       "totalCapacity": "总容量",

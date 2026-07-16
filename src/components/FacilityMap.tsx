@@ -38,8 +38,8 @@ const createMarkerIcon = (color: string) =>
 
 const markerIcons = {
   operational: createMarkerIcon('#1a5632'),
-  'under-construction': createMarkerIcon('#d97706'),
-  planned: createMarkerIcon('#87a96b'),
+  'under-construction': createMarkerIcon('#1a5632'),
+  planned: createMarkerIcon('#1a5632'),
 };
 
 export default function FacilityMap({ facilities, statusLabels, facilityLabels, provinceLabels }: FacilityMapProps) {
@@ -65,8 +65,12 @@ export default function FacilityMap({ facilities, statusLabels, facilityLabels, 
               <h3 className="font-bold text-forest-dark text-sm">{facility.name}</h3>
               <p className="text-xs text-warm-gray mb-2">{facility.city}, {provinceLabels[facility.province] ?? facility.province}</p>
               <div className="grid grid-cols-2 gap-1 text-xs">
-                <span className="text-warm-gray/70">{facilityLabels.status}:</span>
-                <span className="font-medium">{statusLabels[statusKeys[facility.status] as keyof typeof statusLabels]}</span>
+                {facility.status === 'operational' && (
+                  <>
+                    <span className="text-warm-gray/70">{facilityLabels.status}:</span>
+                    <span className="font-medium">{statusLabels[statusKeys[facility.status] as keyof typeof statusLabels]}</span>
+                  </>
+                )}
                 <span className="text-warm-gray/70">{facilityLabels.tier}:</span>
                 <span className="font-medium">{facility.tier}</span>
                 <span className="text-warm-gray/70">{facilityLabels.power}:</span>

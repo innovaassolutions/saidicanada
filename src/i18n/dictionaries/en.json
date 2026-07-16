@@ -234,7 +234,7 @@
   "locations": {
     "label": "Our Facilities",
     "title": "Data Centre Locations",
-    "description": "SAIDI Canada operates and plans facilities across Canada's major technology hubs, leveraging each region's unique advantages for optimal performance and sustainability.",
+    "description": "SAIDI Canada operates facilities across Canada's major technology hubs, leveraging each region's unique advantages for optimal performance and sustainability.",
     "statsBar": {
       "facilities": "Facilities",
       "totalCapacity": "Total Capacity",
