@@ -54,9 +54,11 @@ export default function FacilityCard({ facility, statusLabels, facilityLabels, f
           <h3 className="text-lg font-bold text-forest-dark">{facility.name}</h3>
           <p className="text-warm-gray text-sm">{facility.city}, {provinceLabel ?? facility.province}</p>
         </div>
-        <span className={`px-3 py-1 rounded-full text-xs font-medium ${statusColors[facility.status]}`}>
-          {statusLabels[statusKeys[facility.status] as keyof typeof statusLabels]}
-        </span>
+        {facility.status !== 'under-construction' && (
+          <span className={`px-3 py-1 rounded-full text-xs font-medium ${statusColors[facility.status]}`}>
+            {statusLabels[statusKeys[facility.status] as keyof typeof statusLabels]}
+          </span>
+        )}
       </div>
       <div className="grid grid-cols-2 gap-3 text-sm">
         <div>
