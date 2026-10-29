@@ -14,7 +14,7 @@
     },
     "locations": {
       "title": "Emplacements | SAIDI Canada",
-      "description": "Emplacements des centres de données SAIDI Canada à travers le pays — Toronto, Montréal, Edmonton et Vancouver."
+      "description": "Emplacements des centres de données SAIDI Canada à travers le pays — Toronto, Montréal, Westlock et Vancouver."
     },
     "sustainability": {
       "title": "Développement durable | SAIDI Canada",
@@ -338,7 +338,7 @@
     "regions": {
       "toronto": "Toronto, ON",
       "montreal": "Montréal, QC",
-      "edmonton": "Edmonton, AB",
+      "westlock": "Westlock, AB",
       "vancouver": "Vancouver, C.-B."
     },
     "pricingData": {

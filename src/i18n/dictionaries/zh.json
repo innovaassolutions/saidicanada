@@ -14,7 +14,7 @@
     },
     "locations": {
       "title": "设施位置 | SAIDI Canada",
-      "description": "SAIDI Canada 在加拿大各地的数据中心位置——多伦多、蒙特利尔、埃德蒙顿和温哥华。"
+      "description": "SAIDI Canada 在加拿大各地的数据中心位置——多伦多、蒙特利尔、韦斯特洛克和温哥华。"
     },
     "sustainability": {
       "title": "可持续发展 | SAIDI Canada",
@@ -338,7 +338,7 @@
     "regions": {
       "toronto": "多伦多，安大略省",
       "montreal": "蒙特利尔，魁北克省",
-      "edmonton": "埃德蒙顿，阿尔伯塔省",
+      "westlock": "韦斯特洛克，阿尔伯塔省",
       "vancouver": "温哥华，不列颠哥伦比亚省"
     },
     "pricingData": {
